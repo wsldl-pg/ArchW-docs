@@ -1,5 +1,5 @@
-## ArchWSL
-'set --default-user' command sometimes does not apply.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
+## Launcher
+'config *' command sometimes does not apply.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
 
 In that case please reboot the computer.
 
