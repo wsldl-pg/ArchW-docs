@@ -1,4 +1,3 @@
-## How-to-Use(for Installed Instance)
 #### exe Usage
 ```dos
 Useage :
