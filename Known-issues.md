@@ -1,3 +1,8 @@
+## ArchWSL
+'set --default-user' command sometimes does not apply.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
+
+In that case please reboot the computer.
+
 ## glibc
 Old version of `ArchWSL`(<17121600) uses patched `glibc` named `glibc-wsl`. Because old version of it has bug in `spawni.c`.
 
