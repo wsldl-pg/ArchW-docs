@@ -18,7 +18,7 @@ You can use `fakeroot-tcp` package.
 Download [fakeroot-tcp-1.22-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/17121600/fakeroot-tcp-1.22-1-x86_64.pkg.tar.xz) and run ```pacman -U fakeroot-tcp-1.22-1-x86_64.pkg.tar.xz``` to install.
 
 ## Qt5
-qt5 library doesn't work in WSL. This is WSL issue.(Please see [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
+qt >=5.10 library doesn't work in WSL. This is WSL issue.(Please see [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
 
 Please excute this line on root:
 ```strip --remove-section=.note.ABI-tag /usr/lib/libQt5Core.so.5```
