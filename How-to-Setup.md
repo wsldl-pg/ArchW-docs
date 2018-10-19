@@ -28,6 +28,9 @@ If you rename it you can register with a diffrent name.
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
 (add user)
 
+[root@PC-NAME user]# passwd {username}
+(set default user password)
+
 [root@PC-NAME user]# exit
 
 >Arch.exe config --default-user {username}
