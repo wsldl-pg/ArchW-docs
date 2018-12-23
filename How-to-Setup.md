@@ -36,7 +36,8 @@ If you rename it you can register with a diffrent name.
 >Arch.exe config --default-user {username}
     (setting to default user)
 ````
-If the default user has not been changed, please reboot the computer.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
+If the default user has not been changed(issue [#7](https://github.com/yuk7/ArchWSL/issues/7)), please reboot the computer, or alternatively restart the LxssManager in and Admin command prompt
+`net stop lxssmanager && net start lxssmanager`
 
 #### 3.Initialize keyring
 Please excute these commands for initialize keyring.(This step is necessary for use pacman)
