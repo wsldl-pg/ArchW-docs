@@ -19,6 +19,9 @@ Useage :
       - `--mount-drive`: Get on/off status of Mount drives
       - `--lxuid`: Get LxUID key for this distro
 
+    backup
+      - Execute the backup function using tar.
+
     clean
      - Uninstalls the distro.
 
