@@ -3,13 +3,24 @@
 * Windows Subsystem for Linux feature is enabled.
 
 ## Install
+### with zip package
 #### 1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer zip
 
 #### 2. Extract all files in zip file to same directory
+Please extract to a folder that has write permission.
+For example 'Program Files' can not be used.
 
-#### 3.Run Arch.exe to Extract rootfs and Register to WSL
+#### 3. Run Arch.exe to Extract rootfs and Register to WSL
 Exe filename is using to the instance name to register.
-If you rename it you can register with a diffrent name.
+If you rename it you can register with a different name and have multiple installs.
+
+### with appx package
+#### 1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer .appx and .cer
+#### 2. Install .cer to "Trusted Root Certificate Store" of the local machine
+[For details, please refer to the wiki](https://github.com/yuk7/ArchWSL/wiki/Install-Certificate)
+
+You need administrator privileges to install the certificate
+#### 3. Install .appx
 
 ## Setting for Arch
 #### 1.Setting root password
