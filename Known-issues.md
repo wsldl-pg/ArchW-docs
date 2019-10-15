@@ -22,3 +22,14 @@ qt >=5.10 library doesn't work in WSL. This is an issue with WSL.(Please see [Mi
 
 Please execute this line on root:
 ```strip --remove-section=.note.ABI-tag /usr/lib/libQt5Core.so.5```
+
+## systemd/systemctl
+WSL does not supports systemd.
+I recommend use systemctl alternative script.
+https://github.com/gdraheim/docker-systemctl-replacement
+How to install:
+```
+mv /usr/bin/systemctl /usr/bin/systemctl.old
+curl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py > /usr/bin/systemctl
+chmod +x /usr/bin/systemctl
+```
