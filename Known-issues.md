@@ -26,8 +26,4 @@ Please execute this line on root:
 ## systemd/systemctl
 WSL does not supports systemd.
 I recommend use systemctl alternative script.
-How to install:
-```
-curl https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3027-1/systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz > systemd-altctl.pkg.tar.xz
-sudo pacman -U systemd-altctl.pkg.tar.xz
-```
+Download [systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3027-1/systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz``` to install.
