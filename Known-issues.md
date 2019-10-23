@@ -37,3 +37,7 @@ Download [systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz](https://github.com/yuk7/a
 You can use systemd bottle "[genie](https://github.com/arkane-systems/genie)".
 
 Using it, you can run systemd completely.
+
+Please install AUR package [genie-systemd](https://aur.archlinux.org/packages/genie-systemd)
+
+Run `genie -s` command to start the systemd daemon.
