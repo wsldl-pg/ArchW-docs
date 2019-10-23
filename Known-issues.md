@@ -26,10 +26,8 @@ Please execute this line on root:
 ## systemd/systemctl
 WSL does not supports systemd.
 I recommend use systemctl alternative script.
-https://github.com/gdraheim/docker-systemctl-replacement
 How to install:
 ```
-mv /usr/bin/systemctl /usr/bin/systemctl.old
-curl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py > /usr/bin/systemctl
-chmod +x /usr/bin/systemctl
+curl https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3027-1/systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz > systemd-altctl.pkg.tar.xz
+sudo pacman -U systemd-altctl.pkg.tar.xz
 ```
