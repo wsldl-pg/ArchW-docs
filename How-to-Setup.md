@@ -47,7 +47,7 @@ You need administrator privileges to install the certificate
 >Arch.exe config --default-user {username}
     (setting to default user)
 ````
-If the default user has not been changed(issue [#7](https://github.com/yuk7/ArchWSL/issues/7)), please reboot the computer or alternatively, restart the LxssManager in an Admin command prompt
+If the defahttps://github.com/Daishin16/Collesureult user has not been changed(issue [#7](https://github.com/yuk7/ArchWSL/issues/7)), please reboot the computer or alternatively, restart the LxssManager in an Admin command prompt
 `net stop lxssmanager && net start lxssmanager`
 
 #### 3.Initialize keyring
@@ -61,8 +61,6 @@ Please excute these commands for initialize keyring.(This step is necessary for 
 
 #### Optional. Install systemctl alternative
 We can't use systemd on WSL,this is WSL specification.
-
-If you use systemctl command,you can install systemctl alternative package.
-But this is only partially compatible.
+However,There are several solutions.
 
 Please see [Known issues](https://github.com/yuk7/ArchWSL/wiki/Known-issues#systemdsystemctl).
