@@ -64,8 +64,5 @@ We can't use systemd on WSL,this is WSL specification.
 
 If you use systemctl command,you can install systemctl alternative package.
 But this is only partially compatible.
-```shell
->Arch.exe
-[user@PC-NAME]$ curl -L https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3027-1/systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz -o systemd-altctl.pkg.tar.xz
-[user@PC-NAME]$ sudo pacman -U systemd-altctl.pkg.tar.xz
-```
+
+Please see [Known issues](https://github.com/yuk7/ArchWSL/wiki/Known-issues#systemdsystemctl).
