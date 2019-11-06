@@ -23,6 +23,15 @@ qt >=5.10 library doesn't work in WSL. This is an issue with WSL.(Please see [Mi
 Please execute this line on root:
 ```strip --remove-section=.note.ABI-tag /usr/lib/libQt5Core.so.5```
 
+## MySQL 8/MariaDB
+MySQL >=8 uses the native AIO interface by default. WSL does not support it, so you need to configure it.
+Edit /etc/my.cnf.d/server.cnf for add `innodb_use_native_aio=0` to `[mysqld]` section.
+```
+[mysqld]
+innodb_use_native_aio=0
+```
+
+
 ## systemd/systemctl
 WSL does not supports systemd.
 I recommend use systemctl alternative script or bottle.
