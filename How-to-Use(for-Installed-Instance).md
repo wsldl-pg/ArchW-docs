@@ -52,6 +52,16 @@ Useage :
 ```
 If the default user has not been changed, please reboot the computer.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
 
+#### How to backup instance image
+backup
+```
+>Arch.exe backup
+```
+restore/install backup tarball
+```
+>Arch.exe install backup.tar.gz
+```
+
 
 #### How to uninstall instance
 ```dos
