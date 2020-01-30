@@ -48,8 +48,8 @@ Usage :
 
 #### Run with command line with path translation
 ```dos
->Arch.exe runp echo C:\Windows\cmd.exe
-/mnt/c/Windows/cmd.exe
+>Arch.exe runp echo C:\Windows\System32\cmd.exe
+/mnt/c/Windows/System32/cmd.exe
 ```
 
 #### Change Default User(id command required)
