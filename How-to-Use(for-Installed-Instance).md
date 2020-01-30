@@ -40,7 +40,12 @@ Useage :
 ```dos
 >Arch.exe run uname -r
 4.4.0-43-Microsoft
+```
 
+#### Run with command line with path translation
+```dos
+>Arch.exe runp echo C:\Windows\cmd.exe
+/mnt/c/Windows/cmd.exe
 ```
 
 #### Change Default User(id command required)
