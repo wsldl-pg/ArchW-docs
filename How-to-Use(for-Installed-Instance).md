@@ -46,7 +46,7 @@ Usage :
 4.4.0-43-Microsoft
 ```
 
-#### Run with command line with path translation
+#### Run with command line(path translated)
 ```dos
 >Arch.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
