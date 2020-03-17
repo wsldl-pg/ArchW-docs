@@ -36,11 +36,11 @@ innodb_use_native_aio=0
 WSL does not supports systemd.
 I recommend use systemctl alternative script or bottle.
 
-#### WSL1
+#### WSL1 / WSL2
 You can use a systemctl alternative script.
 However, this is only partially compatible.
 
-Download [systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3027-1/systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.3027-1-x86_64.pkg.tar.xz``` to install.
+Download [systemd-altctl-1.4.3424-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3424-1/systemd-altctl-1.4.3424-1-x86_64.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.3424-1-x86_64.pkg.tar.xz``` to install.
 
 #### WSL2
 You can use systemd bottle "[genie](https://github.com/arkane-systems/genie)".
