@@ -18,13 +18,13 @@ You can use `fakeroot-tcp` package instead. (WSL2 doesn't require that)
 Download [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz) and run ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` to install.
 
 ## Qt5
-qt >=5.10 library doesn't work in WSL. This is an issue with WSL.(Please see [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
+qt >=5.10 library doesn't work in WSL1. This is an issue with WSL.(Please see [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
 
 Please execute this line on root:
 ```strip --remove-section=.note.ABI-tag /usr/lib/libQt5Core.so.5```
 
 ## MySQL 8/MariaDB
-MySQL >=8 uses the native AIO interface by default. WSL does not support it, so you need to configure it.
+MySQL >=8 uses the native AIO interface by default. WSL1 does not support it, so you need to configure it.
 Edit /etc/my.cnf.d/server.cnf for add `innodb_use_native_aio=0` to `[mysqld]` section.
 ```
 [mysqld]
