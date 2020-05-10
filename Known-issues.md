@@ -11,9 +11,9 @@ For that reason **no patched glibc is needed anymore**.
 
 ## fakeroot
 fakeroot is using SYSV IPC by default.
-but WSL does not support it now.
+but WSL1 does not support it now.
 
-You can use `fakeroot-tcp` package instead.
+You can use `fakeroot-tcp` package instead. (WSL2 doesn't require that)
 
 Download [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz) and run ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` to install.
 
