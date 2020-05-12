@@ -31,6 +31,16 @@ Edit /etc/my.cnf.d/server.cnf for add `innodb_use_native_aio=0` to `[mysqld]` se
 innodb_use_native_aio=0
 ```
 
+## D-Bus
+Systemd D-Bus daemon doesn't work in WSL1.
+I recommend use x11-dbus.
+Download [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1-x86_64.pkg.tar.xz) and run ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` to install.
+
+For start D-Bus daemon, run:
+```
+sudo mkdir /run/dbus -p
+sudo dbus-daemon --system
+```
 
 ## systemd/systemctl
 WSL does not supports systemd.
