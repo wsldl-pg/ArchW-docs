@@ -50,7 +50,7 @@ I recommend use systemctl alternative script or bottle.
 You can use a systemctl alternative script.
 However, this is only partially compatible.
 
-Download [systemd-altctl-1.4.3424-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.3424-1/systemd-altctl-1.4.3424-1-x86_64.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.3424-1-x86_64.pkg.tar.xz``` to install.
+Download [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` to install.
 
 #### WSL2
 You can use systemd bottle "[genie](https://github.com/arkane-systems/genie)".
