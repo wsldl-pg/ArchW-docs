@@ -60,3 +60,6 @@ Using it, you can run systemd completely.
 Please install AUR package [genie-systemd](https://aur.archlinux.org/packages/genie-systemd)
 
 Run `genie -s` command to start the systemd daemon.
+
+#### WSL2 (Forked distribution)
+You can use [ArchWSL2](https://github.com/yuk7/ArchWSL2)
