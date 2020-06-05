@@ -64,4 +64,4 @@ Run `genie -s` command to start the systemd daemon.
 #### WSL2 (Forked distribution)
 You can use [ArchWSL2](https://github.com/yuk7/ArchWSL2)
 
-It contains a systemd hack script which can start systemd by default.
+It contains a systemd hack scripts which can start systemd by default.
