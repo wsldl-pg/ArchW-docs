@@ -53,10 +53,10 @@ However, this is only partially compatible.
 Download [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` to install.
 
 #### WSL2
-You can use systemd bottle "[genie](https://github.com/arkane-systems/genie)".
+You can use systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)".
 
 Using it, you can run systemd completely.
 
-Please install AUR package [genie-systemd](https://aur.archlinux.org/packages/genie-systemd)
+You can download [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) and build it.
 
-Run `genie -s` command to start the systemd daemon.
+[See here for how to use it.](https://github.com/sorah/subsystemctl#usage)
