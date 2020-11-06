@@ -53,10 +53,16 @@ However, this is only partially compatible.
 Download [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` to install.
 
 #### WSL2
-You can use systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)".
+You can use systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)" or "[genie](https://github.com/arkane-systems/genie)".
 
 Using it, you can run systemd completely.
 
+##### subsystemctl
 You can download [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) and build it.
 
 [See here for how to use it.](https://github.com/sorah/subsystemctl#usage)
+
+##### genie
+You can use [PKGBUILDs from here](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
+
+[See here for how to use it.](https://github.com/arkane-systems/genie#usage)
