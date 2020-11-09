@@ -68,7 +68,7 @@ backup
 ```
 restore/install backup tarball
 ```
->Arch.exe install backup.tar.gz
+>Arch.exe install full/path/to/backup.tar.gz
 ```
 
 
