@@ -1,5 +1,5 @@
 ## Launcher
-Please see [wsldl wiki](https://github.com/yuk7/wsldl/wiki)
+Please see [wsldl document](https://git.io/wsldl-doc)
 
 ## glibc
 Old version of `ArchWSL`(<17121600) uses patched `glibc` named `glibc-wsl`. Because old version of it has bug in `spawni.c`.

@@ -17,7 +17,7 @@ If you rename it you can register with a different name and have multiple instal
 ### with appx package
 #### 1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer .appx and .cer
 #### 2. Install .cer to "Trusted Root Certificate Store" of the local machine
-[For details, please refer to the wiki](https://github.com/yuk7/ArchWSL/wiki/Install-Certificate)
+[For details, please refer to the wiki](Install-Certificate.md)
 
 You need administrator privileges to install the certificate
 #### 3. Install .appx
@@ -63,4 +63,4 @@ Please excute these commands for initialize keyring.(This step is necessary for 
 We can't use systemd on WSL,this is WSL specification.
 However,There are several solutions.
 
-Please see [Known issues](https://github.com/yuk7/ArchWSL/wiki/Known-issues#systemdsystemctl).
+Please see [Known issues](Known-issues.md#systemdsystemctl).
