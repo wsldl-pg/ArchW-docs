@@ -9,16 +9,16 @@ The certificate must be installed in the "Trusted Root Certificate Store" of the
 
 ### 1. Open the .cer file and click "Install Certificate".
 
-![screenshot1](https://raw.githubusercontent.com/wiki/yuk7/ArchWSL/img/cert/1.install.png)
+![screenshot1](img/cert/1.install.png)
 
 ### 2. Select "Local Machine" and Next.
 
-![screenshot2](https://raw.githubusercontent.com/wiki/yuk7/ArchWSL/img/cert/2.to-localmachine.png)
+![screenshot2](img/cert/2.to-localmachine.png)
 
 ### 3. Select "Place ~ in the following store" and Click Browse to select installation destination.
-![screenshot3](https://raw.githubusercontent.com/wiki/yuk7/ArchWSL/img/cert/3.to-following.png)
+![screenshot3](img/cert/3.to-following.png)
 
 ### 4. Select "Trusted Root Certification Authorities" and OK.
-![screenshot4](https://raw.githubusercontent.com/wiki/yuk7/ArchWSL/img/cert/4.to-rootstore.png)
+![screenshot4](img/cert/4.to-rootstore.png)
 
 ### 5. done
