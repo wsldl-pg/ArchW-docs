@@ -36,7 +36,11 @@ gh_edit_view_mode: "tree"
 plugins:
   - jekyll-seo-tag
 
+markdown: kramdown
+highlighter: rouge
+    
 kramdown:
+  input: GFM
   syntax_highlighter_opts:
     block:
       line_numbers: false
