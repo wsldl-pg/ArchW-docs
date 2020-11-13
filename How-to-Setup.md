@@ -1,3 +1,9 @@
+---
+title: "How to Setup"
+has_children: true
+---
+# How to Setup
+
 ## Requirements
 * Windows 10 1709 Fall Creators Update 64bit or later.
 * Windows Subsystem for Linux feature is enabled.

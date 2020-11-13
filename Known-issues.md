@@ -1,13 +1,22 @@
-## Launcher
+---
+title: "Known issues"
+---
+# Known issues
+
+## Launcher and Common
 Please see [wsldl document](https://git.io/wsldl-doc)
 
 ## glibc
+The new version of glibc has compatibility issues with WSL1.
+
+You can use WSL2 to avoid it.
+<!--
 Old version of `ArchWSL`(<17121600) uses patched `glibc` named `glibc-wsl`. Because old version of it has bug in `spawni.c`.
 
 It has been fixed in the official glibc package (=> 2.26-7).
 
 For that reason **no patched glibc is needed anymore**.
-
+-->
 
 ## fakeroot
 fakeroot is using SYSV IPC by default.

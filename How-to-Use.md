@@ -1,4 +1,8 @@
-#### exe Usage
+---
+title: "How to Use"
+---
+# How to Use (Installed Instance)
+## exe Usage
 
 ```dos
 Usage :
@@ -35,25 +39,25 @@ Usage :
 ```
 
 
-#### Just Run exe
+## Just Run exe
 ```dos
 >Arch.exe
 [root@PC-NAME user]#
 ```
 
-#### Run with command line
+## Run with command line
 ```dos
 >Arch.exe run uname -r
 4.4.0-43-Microsoft
 ```
 
-#### Run with command line with path translation
+## Run with command line with path translation
 ```dos
 >Arch.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
 ```
 
-#### Change Default User(id command required)
+## Change Default User(id command required)
 ```dos
 >Arch.exe config --default-user user
 
@@ -62,7 +66,7 @@ Usage :
 ```
 If the default user has not been changed, please reboot the computer.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
 
-#### How to backup instance image
+## How to backup instance image
 backup
 ```
 >Arch.exe backup
@@ -73,7 +77,7 @@ restore/install backup tarball
 ```
 
 
-#### How to uninstall instance
+## How to uninstall instance
 
 ```dos
 >Arch.exe clean

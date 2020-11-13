@@ -1,4 +1,10 @@
+---
+title: Install Certificate for AppX
+parent: "How to Setup"
+#nav_order:
+---
 
+# Install Certificate for AppX
 ArchWSL is a program not approved by Microsoft.
 
 To use the ArchWSL of appx version, you will need to install a code signing certificate manually.
