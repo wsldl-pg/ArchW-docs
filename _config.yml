@@ -1,7 +1,7 @@
-title: "Wsldl official documentation"
-description: "A Wsldl for documentation"
+title: "ArchWSL official documentation"
+description: "A ArchWSL for documentation"
 footer_content: "Copyright &copy; 2020 Wsldl-pg Documentation Team. Distributed by <a href=\"https://github.com/wsldl-pg/docs/tree/master/LICENSE\">Creative Commons Attribution 4.0 International License.</a>"
-logo: "/asset/wsldl-logo.png"
+#logo: "/asset/wsldl-logo.png"
 
 remote_theme: "pmarsceill/just-the-docs"
 color_scheme: "dark"
@@ -13,7 +13,7 @@ search:
 #url: "https://wsldl.gitlab.io/documentation"
 aux_links:
   " See GitHub":
-    - "//github.com/wsldl-pg/docs"
+    - "//github.com/wsldl-pg/ArchW-docs"
 aux_links_new_tab: true
 
 permalink: pretty
@@ -26,7 +26,7 @@ back_to_top_text: "Back to top"
 
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/wsldl-pg/docs"
+gh_edit_repository: "https://github.com/wsldl-pg/ArchW-docs"
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
 
