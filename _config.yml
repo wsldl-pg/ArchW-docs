@@ -1,0 +1,52 @@
+title: "Wsldl official documentation"
+description: "A Wsldl for documentation"
+footer_content: "Copyright &copy; 2020 Wsldl-pg Documentation Team. Distributed by <a href=\"https://github.com/wsldl-pg/docs/tree/master/LICENSE\">Creative Commons Attribution 4.0 International License.</a>"
+logo: "/asset/wsldl-logo.png"
+
+remote_theme: "pmarsceill/just-the-docs"
+color_scheme: "dark"
+search_enabled: true
+search:
+  rel_url: true
+  button: true
+#baseurl: "/documentation"
+#url: "https://wsldl.gitlab.io/documentation"
+aux_links:
+  " See GitHub":
+    - "//github.com/wsldl-pg/docs"
+aux_links_new_tab: true
+
+permalink: pretty
+exclude: [ "node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "lib/", "bin/", "Rakefile", "docs/tests/", "module/" ]
+
+heading_anchors: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/wsldl-pg/docs"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+#ga_tracking: UA-1234567-89
+#ga_tracking_anonymize_ip: true
+
+plugins:
+  - jekyll-seo-tag
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+  # ignore:
+  #   envs: all

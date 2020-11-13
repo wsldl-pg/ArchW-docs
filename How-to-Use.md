@@ -1,4 +1,5 @@
 #### exe Usage
+
 ```dos
 Usage :
     <no args>
@@ -73,6 +74,7 @@ restore/install backup tarball
 
 
 #### How to uninstall instance
+
 ```dos
 >Arch.exe clean
 
