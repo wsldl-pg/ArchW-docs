@@ -13,7 +13,7 @@ For that reason **no patched glibc is needed anymore**.
 fakeroot is using SYSV IPC by default.
 but WSL1 does not support it now.
 
-You can use `fakeroot-tcp` package instead. (WSL2 doesn't require that)
+You can use `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) package instead. (WSL2 doesn't require that)
 
 Download [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz) and run ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` to install.
 
@@ -33,7 +33,7 @@ innodb_use_native_aio=0
 
 ## D-Bus
 Systemd D-Bus daemon doesn't work in WSL1.
-I recommend use x11-dbus.
+I recommend use `dbus-x11`[ᴬᵁᴿ](https://aur.archlinux.org/packages/dbus-x11/).
 Download [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1-x86_64.pkg.tar.xz) and run ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` to install.
 
 For start D-Bus daemon, run:
