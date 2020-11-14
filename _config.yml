@@ -35,6 +35,7 @@ gh_edit_view_mode: "tree"
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 markdown: kramdown
 highlighter: rouge
