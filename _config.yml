@@ -1,7 +1,7 @@
 title: "ArchWSL official documentation"
 description: "A ArchWSL for documentation"
 footer_content: "Copyright &copy; 2020 Wsldl-pg Documentation Team. Distributed by <a href=\"https://github.com/wsldl-pg/docs/tree/master/LICENSE\">Creative Commons Attribution 4.0 International License.</a>"
-#logo: "/asset/wsldl-logo.png"
+logo: "/asset/wsldl-logo.png"
 
 remote_theme: "pmarsceill/just-the-docs"
 color_scheme: "dark"
