@@ -10,7 +10,7 @@ search:
   rel_url: true
   button: true
 baseurl: "/ArchW-docs"
-url: "https://wsldl-pg.github.io/ArchW-docs"
+url: "https://wsldl-pg.github.io"
 aux_links:
   " See GitHub":
     - "//github.com/wsldl-pg/ArchW-docs"
