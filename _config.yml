@@ -9,8 +9,8 @@ search_enabled: true
 search:
   rel_url: true
   button: true
-#baseurl: "/documentation"
-#url: "https://wsldl.gitlab.io/documentation"
+baseurl: "/ArchW-docs"
+url: "https://wsldl-pg.github.io/ArchW-docs"
 aux_links:
   " See GitHub":
     - "//github.com/wsldl-pg/ArchW-docs"
