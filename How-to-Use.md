@@ -1,7 +1,8 @@
 ---
 title: "How to Use"
 ---
-# How to Use (Installed Instance)
+# How to Use (after ArchWSL is installed)
+
 ## exe Usage
 
 ```
@@ -39,52 +40,63 @@ Usage :
 ```
 
 
-## Just Run exe
+## Open an interactive shell
+
 ```
 >Arch.exe
 [root@PC-NAME user]#
 ```
 
-## Run with command line
+## Run a single command and exit
+
 ```
 >Arch.exe run uname -r
 4.4.0-43-Microsoft
 ```
 
-## Run with command line with path translation
+## Run a command with path translation and exit
+
 ```
 >Arch.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
 ```
 
-## Change Default User(id command required)
+## Change Default User (id command required)
+
 ```
 >Arch.exe config --default-user user
 
 >Arch.exe
 [user@PC-NAME dir]$
 ```
-If the default user has not been changed, please reboot the computer.(issue [#7](https://github.com/yuk7/ArchWSL/issues/7))
-> You can try to do before it (From [This Comment](https://github.com/yuk7/ArchWSL/issues/7#issuecomment-397725710))
->```
->sc stop LxssManager
->sc start LxssManager
->```
 
-## How to backup instance image
-backup
+If the default user has not been changed
+([issue #7](https://github.com/yuk7/ArchWSL/issues/7)),
+please reboot the computer or alternatively, restart the LxssManager in an Admin
+command prompt.
+
+To restart the `LxssManager`, run this:
+
+```batch
+net stop lxssmanager && net start lxssmanager
+```
+
+## Backup Rootfs
+
+Backup:
+
 ```
 >Arch.exe backup
 ```
-restore/install backup tarball
+
+Restore/install backup tarball:
+
 ```
 >Arch.exe install full/path/to/backup.tar.gz
 ```
 
-
-## How to uninstall instance
+## Uninstall Instance
 
 ```
 >Arch.exe clean
-
 ```

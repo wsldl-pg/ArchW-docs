@@ -2,41 +2,54 @@
 title: "How to Setup"
 has_children: true
 ---
-# How to Setup
+# How to Set Up ArchWSL
 
 ## Requirements
+
 * Windows 10 1709 Fall Creators Update 64bit or later.
 * Windows Subsystem for Linux feature is enabled.
 
-## Install
-### with zip package
-#### 1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer zip
+## Installation Instructions
 
-#### 2. Extract all files in zip file to same directory
-Please extract to a folder that has write permission.
-For example 'Program Files' can not be used.
+There are two ways to install ArchWSL.
 
-#### 3. Run Arch.exe to Extract rootfs and Register to WSL
-Exe filename is using to the instance name to register.
-If you rename it you can register with a different name and have multiple installs.
+### Method 1: zip file
 
-### with appx package
-#### 1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer .appx and .cer
-#### 2. Install .cer to "Trusted Root Certificate Store" of the local machine
-[For details, please refer to Install Certificate page.](Install-Certificate.md)
+1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer zip
+2. Extract all files in zip file to the same directory.
+   Please extract to a folder that has write permission.
+   For example, `C:\Program Files` cannot be used.
+3. Run `Arch.exe` to extract the rootfs and register to WSL
 
-You need administrator privileges to install the certificate
-#### 3. Install .appx
+As a side note, the executable name is what is used as the WSL instance name.
+If you rename it, you can have multiple installs.
+See [@yuk7/wsldl/main.c](https://github.com/yuk7/wsldl/blob/00b0a696128d07192565ccf7e337e0797f9ee999/main.c#L57-L96).
 
-## Setting for Arch
-#### 1.Setting root password
-```
+### Method 2: appx pacakge
+
+1. [Download the `.appx` and `.cer`](https://github.com/yuk7/ArchWSL/releases/latest)
+2. Install `.cer` to the "Trusted Root Certificate Store" of the local machine.
+   For details, please refer to the [Install Certificate page](Install-Certificate.md).
+   You will need administrator privileges to install the certificate.
+3. Install the `.appx`
+
+## Settings for Arch installing ArchWSL
+
+### Setting the root password
+
+```shell
 >Arch.exe
 [root@PC-NAME user]# passwd
 ```
 
-#### 2.Setup default user  (Please see ArchWiki [Sudo](https://wiki.archlinux.org/index.php/Sudo#Example_entries) and [User and groups](https://wiki.archlinux.org/index.php/Users_and_groups) pages.)
-```
+### Set up the default user
+
+Please see ArchWiki
+[Sudo](https://wiki.archlinux.org/index.php/Sudo#Example_entries)
+and
+[User and groups](https://wiki.archlinux.org/index.php/Users_and_groups) pages.
+
+```shell
 >Arch.exe
 [root@PC-NAME]# EDITOR=nano visudo
     %wheel      ALL=(ALL) ALL
@@ -52,12 +65,24 @@ You need administrator privileges to install the certificate
 
 >Arch.exe config --default-user {username}
     (setting to default user)
-````
-If the default user has not been changed(issue [#7](https://github.com/yuk7/ArchWSL/issues/7)), please reboot the computer or alternatively, restart the LxssManager in an Admin command prompt
-`net stop lxssmanager && net start lxssmanager`
+```
 
-#### 3.Initialize keyring
-Please excute these commands for initialize keyring.(This step is necessary for use pacman)
+If the default user has not been changed
+([issue #7](https://github.com/yuk7/ArchWSL/issues/7)),
+please reboot the computer or alternatively, restart the LxssManager in an Admin
+command prompt.
+
+To restart the `LxssManager`, run this:
+
+```batch
+net stop lxssmanager && net start lxssmanager
+```
+
+### Initialize keyring
+
+Please excute these commands to initialize the keyring.
+(This step is necessary to use pacman.)
+
 ```shell
 >Arch.exe
 [user@PC-NAME]$ sudo pacman-key --init
@@ -65,8 +90,7 @@ Please excute these commands for initialize keyring.(This step is necessary for 
 [root@PC-NAME]$ sudo pacman-key --populate
 ```
 
-#### Optional. Install systemctl alternative
-We can't use systemd on WSL,this is WSL specification.
-However,There are several solutions.
+### Install systemctl alternative (Optional)
 
+WSL does not have support for systemd however, there are several solutions.
 Please see [Known issues](Known-issues.md#systemdsystemctl).
