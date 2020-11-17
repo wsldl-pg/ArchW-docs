@@ -23,7 +23,6 @@ There are two ways to install ArchWSL.
 
 As a side note, the executable name is what is used as the WSL instance name.
 If you rename it, you can have multiple installs.
-See [@yuk7/wsldl/main.c](https://github.com/yuk7/wsldl/blob/00b0a696128d07192565ccf7e337e0797f9ee999/main.c#L57-L96).
 
 ### Method 2: appx pacakge
 
@@ -33,7 +32,7 @@ See [@yuk7/wsldl/main.c](https://github.com/yuk7/wsldl/blob/00b0a696128d07192565
    You will need administrator privileges to install the certificate.
 3. Install the `.appx`
 
-## Settings for Arch installing ArchWSL
+## Setup after install
 
 ### Setting the root password
 
