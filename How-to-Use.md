@@ -29,7 +29,7 @@ Usage :
       - `--lxguid`: Get WSL GUID key for this distro
 
     backup [contents]
-      - `--tgz`: Output backup.tar.gz to the current directory using tar command
+      - `--tar`: Output backup.tar to the current directory
       - `--reg`: Output settings registry file to the current directory
 
     clean
@@ -92,7 +92,7 @@ Backup:
 Restore/install backup tarball:
 
 ```
->Arch.exe install full/path/to/backup.tar.gz
+>Arch.exe install full/path/to/backup.tar
 ```
 
 ## Uninstall Instance
