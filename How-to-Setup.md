@@ -50,9 +50,8 @@ and
 
 ```shell
 >Arch.exe
-[root@PC-NAME]# EDITOR=nano visudo
-    %wheel      ALL=(ALL) ALL
-    (setup sudoers file.)
+[root@PC-NAME]# echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+(setup sudoers file.)
 
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
 (add user)
