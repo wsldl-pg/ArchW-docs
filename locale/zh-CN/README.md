@@ -9,9 +9,9 @@ has_children: true
 
 # ArchWSL 文档
 
-[安装方法](How-to-Setup.md)
+[如何安装](How-to-Setup.md)
 
-[使用方法](How-to-Use.md)
+[如何使用](How-to-Use.md)
 
 [已知问题](Known-issues.md)
 
