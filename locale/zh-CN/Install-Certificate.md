@@ -1,6 +1,6 @@
 ---
-title: Install Certificate for AppX
-parent: "How to Setup (Chinese)"
+title: 安装 AppX 所用的证书
+parent: "如何安装"
 #nav_order:
 ---
 

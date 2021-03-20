@@ -7,7 +7,7 @@ permalink: /locale/zh-CN/
 has_children: true
 ---
 
-# ArchWSL documentation
+# ArchWSL 文档
 
 [安装方法](How-to-Setup.md)
 

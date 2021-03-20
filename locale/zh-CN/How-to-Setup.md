@@ -1,6 +1,7 @@
 ---
-title: "How to Setup (Chinese)"
-parent: "Translates"
+title: "如何安装"
+parent: "简体中文"
+grand_parent: "Translates"
 has_children: true
 ---
 # 如何安装

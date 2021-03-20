@@ -1,7 +1,9 @@
 ---
-title: "Known issues"
+title: "已知问题"
+parent: "简体中文"
+grand_parent: "Translates"
 ---
-# Known issues （已知问题）
+# 已知问题
 
 ## 快捷方式
 请查看 [wsldl 的文档](https://git.io/wsldl-doc)。
