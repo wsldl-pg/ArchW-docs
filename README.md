@@ -12,3 +12,5 @@ permalink: /
 [How to Use](How-to-Use.md)
 
 [Known issues](Known-issues.md)
+
+[Translates](locale/translates.md)
