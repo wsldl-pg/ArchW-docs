@@ -1,6 +1,7 @@
 ---
 title: "使い方"
 parent: "日本語"
+grand_parent: "Translates"
 ---
 # How to Use (after ArchWSL is installed)
 

@@ -14,4 +14,4 @@ has_children: true
 
 [既知の問題](Known-issues.md)
 
-[英語版](../../translates.md)
+[Languages](../translates.md)
