@@ -3,67 +3,69 @@ title: "使い方"
 parent: "日本語"
 grand_parent: "Translates"
 ---
-# How to Use (after ArchWSL is installed)
-
+# 使い方(インストール後)
 ## exe Usage
 
 ```
 Usage :
-    <no args>
-      - Open a new shell with your default settings.
+    <引数なし>
+      - デフォルト設定で新しいシェルを起動します
 
     run <command line>
-      - Run the given command line in that distro. Inherit current directory.
+      - 与えられたコマンドラインをインスタンス内で実行します。 カレントディレクトリが引き継がれます。
 
-    runp <command line (includes windows path)>
-      - Run the path translated command line in that distro.
+    runp <command line (windowsのパスを含む)>
+      - 与えられたコマンドラインのパスを変換した上でインスタンス内で実行します。
 
     config [setting [value]]
-      - `--default-user <user>`: Set the default user for this distro to <user>
-      - `--default-uid <uid>`: Set the default user uid for this distro to <uid>
-      - `--append-path <on|off>`: Switch of Append Windows PATH to $PATH
-      - `--mount-drive <on|off>`: Switch of Mount drives
+      - `--default-user <user>`: インスタンスのデフォルトユーザーを<user>に設定します。
+      - `--default-uid <uid>`: インスタンスのデフォルトユーザーのuidを<uid>に設定します。
+      - `--append-path <on|off>`: Windows側のPATH設定をLinux側に引き継ぐ機能のon/offを設定します。
+      - `--mount-drive <on|off>`: Windowsのドライブをマウントする機能のon/offを設定します。
+      - `--default-term <default|wt|flute>`: デフォルトのターミナルを設定します。
 
     get [setting]
-      - `--default-uid`: Get the default user uid in this distro
-      - `--append-path`: Get on/off status of Append Windows PATH to $PATH
-      - `--mount-drive`: Get on/off status of Mount drives
-      - `--lxguid`: Get WSL GUID key for this distro
+      - `--default-uid`: インスタンスのデフォルトユーザーのuidを取得します。
+      - `--append-path`: Windows側のPATH設定をLinux側に引き継ぐ機能のon/offを確認します。
+      - `--mount-drive`: Windowsのドライブをマウントする機能のon/offを確認します。
+      - `--wsl-version`: WSLのバージョン(1/2)を確認します。
+      - `--default-term`: このランチャーに設定されたデフォルトのターミナルを確認します。
+      - `--lxuid`: システム内部で使用されているLxUIDを取得します。
 
     backup [contents]
-      - `--tar`: Output backup.tar to the current directory
-      - `--reg`: Output settings registry file to the current directory
-
+      - `--tar`: カレントディレクトリにbackup.tarを出力します。
+      - `--reg`: 設定のレジストリファイルをbackup.regとしてカレントディレクトリに出力します。
+      
     clean
-      - Uninstall the distro.
+      - インスタンスをアンインストールします。
 
     help
-      - Print this usage message.
+      - helpを表示します。
 ```
 
 
-## Open an interactive shell
+## 対話シェルを起動
 
 ```
 >Arch.exe
 [root@PC-NAME user]#
 ```
 
-## Run a single command and exit
+## コマンドを実行し終了
 
 ```
 >Arch.exe run uname -r
 4.4.0-43-Microsoft
 ```
 
-## Run a command with path translation and exit
+## 与えられたコマンドラインのパスを変換し実行
 
 ```
 >Arch.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
 ```
 
-## Change Default User (id command required)
+## デフォルトユーザーを変更
 
 ```
 >Arch.exe config --default-user user
@@ -72,32 +74,31 @@ Usage :
 [user@PC-NAME dir]$
 ```
 
-If the default user has not been changed
-([issue #7](https://github.com/yuk7/ArchWSL/issues/7)),
-please reboot the computer or alternatively, restart the LxssManager in an Admin
-command prompt.
+デフォルトユーザーの変更がうまく行かない場合は,
+コンピュータを再起動するか、LxssManagerサービスを再起動してください。
+詳細は([issue #7](https://github.com/yuk7/ArchWSL/issues/7))を参照してください。
 
-To restart the `LxssManager`, run this:
+`LxssManager`を再起動するには、管理者権限のコマンドプロンプトで以下のコマンドを実行します:
 
 ```batch
 net stop lxssmanager && net start lxssmanager
 ```
 
-## Backup Rootfs
+## rootfsをバックアップ
 
-Backup:
+バックアップ:
 
 ```
 >Arch.exe backup
 ```
 
-Restore/install backup tarball:
+バックアップしたtarをインストール/リストア:
 
 ```
 >Arch.exe install full/path/to/backup.tar
 ```
 
-## Uninstall Instance
+## インスタンスをアンインストール
 
 ```
 >Arch.exe clean
