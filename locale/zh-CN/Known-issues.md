@@ -11,20 +11,13 @@ grand_parent: "Translates"
 ## glibc
 新版的 glibc 和 WSL1 有兼容问题。
 
-你可以用WSL2规避此问题。
-<!--
-Old version of `ArchWSL`(<17121600) uses patched `glibc` named `glibc-wsl`. Because old version of it has bug in `spawni.c`.
-
-It has been fixed in the official glibc package (=> 2.26-7).
-
-For that reason **no patched glibc is needed anymore**.
--->
+你可以降级glibc或者改用WSL2规避此问题。
 
 ## fakeroot
 fakeroot 默认使用 SYSV IPC，
 但是WSL1目前还不支持它。
 
-你可以使用转而使用 `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) 包。 (WSL2 无此问题)
+你可以转而使用 `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) 包。 (WSL2 无此问题)
 
 下载 [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz) 然后运行 ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` 以安装。
 
@@ -61,7 +54,7 @@ WSL不支持Systemd。
 
 #### WSL1 / WSL2
 你可以用 systemctl 替代脚本，
-不过它只能部分兼容 systemctl.
+不过它只能部分兼容 systemctl。
 
 下载 [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) 然后运行 ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` 以安装。
 
