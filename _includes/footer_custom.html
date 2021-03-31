@@ -1,0 +1,27 @@
+<p id="footer_translates"></p>
+
+<script type="text/javascript">
+   window.addEventListener("load", addTranslates);
+   trans_langs = [["ja-JP", "日本語"],["zh-CN", "简体中文"]];
+   
+    function addTranslates() {
+      target = document.getElementById("footer_translates");
+      pathArr = location.pathname.split("/");
+
+      if (pathArr[2] == "locale") {
+          if (pathArr[3] != "translates") {
+              pathArr.splice(2, 2);
+              enPath = pathArr.join("/");
+              target.innerHTML = "View this page in <a href='" + enPath + "'>English</a>";
+          }
+      } else {
+          target.innerHTML = "View this page in: ";
+          trans_langs.forEach(element => {
+            elementPathArr = pathArr.concat();
+            elementPathArr.splice(2, 0, "locale/" + element[0]);
+            elementPath = elementPathArr.join("/");
+            target.innerHTML += " <a href='" + elementPath + "'>" + element[1] +  "</a> |";
+          });
+      }
+    }
+</script>
