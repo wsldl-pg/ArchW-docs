@@ -24,7 +24,7 @@ There are two ways to install ArchWSL.
 As a side note, the executable name is what is used as the WSL instance name.
 If you rename it, you can have multiple installs.
 
-### Method 2: appx pacakge
+### Method 2: appx package
 
 1. [Download the `.appx` and `.cer`](https://github.com/yuk7/ArchWSL/releases/latest)
 2. Install `.cer` to the "Trusted Root Certificate Store" of the local machine.
