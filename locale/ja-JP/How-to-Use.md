@@ -1,7 +1,7 @@
 ---
 title: "使い方"
 parent: "日本語"
-grand_parent: "Translates"
+grand_parent: "Translations"
 ---
 # 使い方(インストール後)
 ## exe Usage

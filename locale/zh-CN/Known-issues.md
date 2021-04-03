@@ -1,7 +1,7 @@
 ---
 title: "已知问题"
 parent: "简体中文"
-grand_parent: "Translates"
+grand_parent: "Translations"
 ---
 # 已知问题
 

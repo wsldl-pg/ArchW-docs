@@ -1,7 +1,7 @@
 ---
 title: "インストール方法"
 parent: "日本語"
-grand_parent: "Translates"
+grand_parent: "Translations"
 has_children: true
 ---
 # ArchWSLのセットアップ

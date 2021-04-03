@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "简体中文"
-parent: "Translates"
+parent: "Translations"
 description: "简体中文的主页"
 permalink: /locale/zh-CN/
 has_children: true
