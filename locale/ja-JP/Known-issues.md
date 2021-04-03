@@ -1,7 +1,7 @@
 ---
 title: "既知の問題"
 parent: "日本語"
-grand_parent: "Translates"
+grand_parent: "Translations"
 ---
 # Known issues
 

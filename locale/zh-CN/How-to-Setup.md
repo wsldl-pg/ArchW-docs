@@ -1,7 +1,7 @@
 ---
 title: "如何安装"
 parent: "简体中文"
-grand_parent: "Translates"
+grand_parent: "Translations"
 has_children: true
 ---
 # 如何安装

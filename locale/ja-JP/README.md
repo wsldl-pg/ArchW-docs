@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "日本語"
-parent: "Translates"
+parent: "Translations"
 description: "日本語版のホーム"
 permalink: /locale/ja-JP/
 has_children: true

@@ -1,7 +1,7 @@
 ---
 title: "如何使用"
 parent: "简体中文"
-grand_parent: "Translates"
+grand_parent: "Translations"
 ---
 # 如何使用 (ArchWSL 安装以后)
 
