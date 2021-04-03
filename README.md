@@ -13,4 +13,4 @@ permalink: /
 
 [Known issues](Known-issues.md)
 
-[Translates](locale/translates.md)
+[Translations](locale/Translations.md)

@@ -15,4 +15,4 @@ has_children: true
 
 [已知问题](Known-issues.md)
 
-[回到翻译列表](../translates.md)
+[回到翻译列表](../Translations.md)
