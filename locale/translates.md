@@ -1,9 +1,9 @@
 ---
-title: "Translates"
+title: "Translations"
 has_children: true
 ---
 
-# Translatesyuk7/ArchW-docs
+# Translations
 
 [English](../README.md)
 
