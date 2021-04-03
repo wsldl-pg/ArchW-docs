@@ -10,7 +10,7 @@
       pathArr = location.pathname.split("/");
 
       if (pathArr[2] == "locale") {
-          if (pathArr[3] != "translates") {
+          if (pathArr[3] != "Translations") {
               pathArr.splice(2, 2);
               enPath = pathArr.join("/");
               target.innerHTML = "View this page in <a href='" + enPath + "'>English</a>";
