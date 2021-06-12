@@ -1,10 +1,10 @@
 ---
 title: "사용법"
 parent: "한국어"
-grand_parent: "Translations""
+grand_parent: "Translations"
 ---
 # 사용법 (설치된 후)
-## exe 사용법
+## exe Usage
 
 ```
 Usage :
