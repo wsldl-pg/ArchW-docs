@@ -69,4 +69,4 @@ systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)" 또는 "[
 #### genie
 [여기 있는 PKGBUILD들](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae)
 
-[여기서 어떻게 사용하는지 보십시오.](https://github.com/arkane-systems/genie#usage)
+[그것들을 어떻게 사용하는지 보십시오.](https://github.com/arkane-systems/genie#usage)
