@@ -3,7 +3,7 @@ title: "알려진 이슈들"
 parent: "한국어"
 grand_parent: "Translations"
 ---
-# 알려진 이슈들
+# 알려진 문제점
 
 ## 실행파일과 일반 사항
 [wsldl 문서](https://git.io/wsldl-doc) 를 참조해주십시오.
