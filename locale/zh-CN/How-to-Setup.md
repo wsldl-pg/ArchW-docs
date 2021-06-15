@@ -28,7 +28,7 @@ has_children: true
 
 ### 方法 2: appx 包
 
-1. [下载](https://github.com/yuk7/ArchWSL/releases/latest) `.appx` 以及 `.cer`。
+1. 下载([GH](https://github.com/yuk7/ArchWSL/releases/latest)|[镜像](https://gitee.com/yuk7/archwsl-mirror)) `.appx` 以及 `.cer`。
 2. 安装 `.cer` 到 “本地计算机”的"受信任的根证书颁发机构"。
    更多详情，请查看《[安装证书](Install-Certificate.md)》。
 3. 双击安装 `.appx` 文件。
