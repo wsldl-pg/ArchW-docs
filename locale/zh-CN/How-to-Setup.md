@@ -17,7 +17,7 @@ has_children: true
 
 ### 方法 1: zip 文件
 
-1. 下载[[GH](https://github.com/yuk7/ArchWSL/releases/latest)|[镜像](https://gitee.com/yuk7/archwsl-mirror)] 安装器 zip。
+1. 下载 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/[镜像](https://gitee.com/yuk7/archwsl-mirror)] 安装器 zip。
 2. 解压缩Zip文件中的全部内容到相同的目录。
    请解压到一个你有写权限的目录。
    例如“`C:\Program Files`”就不该被使用。
@@ -28,7 +28,7 @@ has_children: true
 
 ### 方法 2: appx 包
 
-1. 下载[[GH](https://github.com/yuk7/ArchWSL/releases/latest)|[镜像](https://gitee.com/yuk7/archwsl-mirror)] `.appx` 以及 `.cer`。
+1. 下载 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/ [镜像](https://gitee.com/yuk7/archwsl-mirror)] `.appx` 以及 `.cer`。
 2. 安装 `.cer` 到 “本地计算机”的"受信任的根证书颁发机构"。
    更多详情，请查看《[安装证书](Install-Certificate.md)》。
 3. 双击安装 `.appx` 文件。
