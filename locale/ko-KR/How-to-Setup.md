@@ -30,7 +30,7 @@ ArchWSL을 설치하는 2가지 방법이 있습니다.
 
 1. [`.appx` 와 `.cer` 를 다운로드하십시오](https://github.com/yuk7/ArchWSL/releases/latest)
 2. `.cer` 파일을 기기의 "신뢰할 수 있는 루트 인증 기관" 에 설치하십시오.
-   추가적인 설명이 필요하시다면, [증명서 설치 가이드](Install-Certificate.md) 를 따라주십시오.
+   추가적인 설명이 필요하시다면, [인증서 설치 가이드](Install-Certificate.md) 를 따라주십시오.
    인증서 설치를 위해서는 관리자 권한이 필요합니다.
 3. `.appx` 를 클릭해 설치하십시오.
 
@@ -92,4 +92,4 @@ net stop lxssmanager && net start lxssmanager
 ### systemctl 설치하기(선택)
 
 WSL 은 systemd를 기본적으로 사용하지 않지만, 여러가지의 솔루션이 있습니다.
-[알려진 이슈](Known-issues.md#systemdsystemctl) 를 참고해주십시오.
+[알려진 ](Known-issues.md#systemdsystemctl) 를 참고해주십시오.
