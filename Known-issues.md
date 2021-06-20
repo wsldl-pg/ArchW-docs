@@ -4,12 +4,12 @@ title: "Known issues"
 # Known issues
 
 ## Launcher and Common
-Please see [wsldl document](https://git.io/wsldl-doc)
+Please see the [wsldl document](https://git.io/wsldl-doc).
 
 ## glibc
 The new version of glibc has compatibility issues with WSL1.
 
-You can use WSL2 to avoid it.
+Using WSL2 will avoid it.
 
 ## fakeroot
 fakeroot is using SYSV IPC by default.
