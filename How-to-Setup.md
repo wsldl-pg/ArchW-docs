@@ -15,10 +15,10 @@ There are two ways to install ArchWSL.
 
 ### Method 1: zip file
 
-1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) installer zip
+1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) the installer zip.
 2. Extract all files in zip file to the same directory.
-   Please extract to a folder that has write permission.
-   For example, `C:\Program Files` cannot be used.
+   Please extract to a folder that you have write permission.
+   For example, `C:\Program Files` cannot be used since the rootfs cannot be modified there.
 3. Run `Arch.exe` to extract the rootfs and register to WSL
 
 As a side note, the executable name is what is used as the WSL instance name.
