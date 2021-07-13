@@ -92,4 +92,4 @@ net stop lxssmanager && net start lxssmanager
 ### systemctl 설치하기(선택)
 
 WSL 은 systemd를 기본적으로 사용하지 않지만, 여러가지의 솔루션이 있습니다.
-[알려진 ](Known-issues.md#systemdsystemctl) 를 참고해주십시오.
+[알려진 문제점](Known-issues.md#systemdsystemctl) 를 참고해주십시오.
