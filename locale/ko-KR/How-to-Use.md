@@ -4,10 +4,10 @@ parent: "한국어"
 grand_parent: "Translations"
 ---
 # 사용법 (설치된 후)
-## exe Usage
+## exe 사용법
 
 ```
-Usage :
+사용법 :
     <인수 없음>
       - 기본 설정으로 새로운 쉘을 엽니다.
 
