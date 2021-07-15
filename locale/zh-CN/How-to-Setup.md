@@ -9,29 +9,31 @@ has_children: true
 ## 系统需求
 
 * Windows 10 1709 秋季创意者更新或者更高版本
-* 开启 `适用于Linux的Windows子系统` 功能
+* 开启 `适用于 Linux 的 Windows 子系统` 功能
 
 ## 安装方法
 
-有两种方法安装ArchWSL.
+有两种方法安装 ArchWSL.
 
-### 方法 1: zip 文件
 
+
+### 方法 1：zip 文件
 1. 下载 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/[镜像](https://gitee.com/yuk7/archwsl-mirror)] zip 安装包。
 2. 解压缩 zip 文件中的全部内容到相同的目录。
    请解压到一个你拥有写权限的目录。
-   例如 `C:\Program Files` 就不该被使用。
-3. 运行 `Arch.exe` 来安装rootfs和注册表配置。
+   例如， `C:\Program Files` 就不该被使用。
+3. 运行 `Arch.exe` 来安装 rootfs 和注册表配置。
 
-另外，EXE文件名称是用作WSL实例的名称。
-也就是说，如果重命名它，就可以多次安装。
+另外，EXE 文件的名称会同时用作你的 WSL 实例名称。
 
-### 方法 2: appx 包
+也就是说，如果复制多个 EXE 文件，并重命名成不同的名称，你就同时拥有了多个不同的 ArchWSL 并且互不冲突。
 
-1. 下载 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/ [镜像](https://gitee.com/yuk7/archwsl-mirror)] `.appx` 以及 `.cer`。
-2. 安装 `.cer` 到本地计算机的受信任的根证书颁发机构。
-   更多详情，请查看《[安装证书](Install-Certificate.md)》。
-3. 双击安装 `.appx` 文件。
+### 方法 2：appx 包
+1. 从 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/[镜像](https://gitee.com/yuk7/archwsl-mirror)] 下载发布的 .appx 和 .cer 文件。
+
+2. 安装 .cer 文件到 “本地计算机” 的 “受信任的根证书颁发机构”。
+   更多详情，请查看对应[文档页面](https://wsldl-pg.github.io/ArchW-docs/locale/zh-CN/Install-Certificate/)。
+3. 双击安装 appx 文件。
 
 ## 完成安装后的操作
 
