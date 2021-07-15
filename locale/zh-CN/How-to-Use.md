@@ -7,7 +7,7 @@ grand_parent: "Translations"
 
 ## exe 用法
 
-```dos
+```shell
 用法 :
     <无参数>
       - 以你的默认设置打开一个新的Shell。
@@ -44,30 +44,30 @@ grand_parent: "Translations"
       - 显示此帮助信息。
 ```
 
-## 打开默认Shell
+## 打开默认 Shell
 
-```
+```shell
 >Arch.exe
 [root@PC-NAME user]#
 ```
 
 ## 立刻运行一个命令后退出
 
-```
+```shell
 >Arch.exe run uname -r
 4.4.0-43-Microsoft
 ```
 
 ## 运行一个命令（转译路径）后退出
 
-```
+```shell
 >Arch.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
 ```
 
-## 更改默认用户（需要ID命令）
+## 更改默认用户（需要 ID 命令）
 
-```
+```shell
 >Arch.exe config --default-user 用户
 
 >Arch.exe
@@ -76,7 +76,7 @@ grand_parent: "Translations"
 
 若是默认用户未被更改
 ([issue #7](https://github.com/yuk7/ArchWSL/issues/7)),
-请重启电脑或者重启LxssManager。
+请重启电脑或者重启 LxssManager 服务。
 
 若要重启 `LxssManager`, 在管理员命令提示符中运行：
 
@@ -88,18 +88,18 @@ net stop lxssmanager && net start lxssmanager
 
 备份:
 
-```
+```shell
 >Arch.exe backup
 ```
 
 还原备份文件：
 
-```
+```shell
 >Arch.exe install full/path/to/backup.tar
 ```
 
 ## 卸载实例
 
-```
+```shell
 >Arch.exe clean
 ```
