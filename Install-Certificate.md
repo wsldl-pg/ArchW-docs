@@ -8,7 +8,7 @@ parent: "How to Setup"
 
 ArchWSL is not approved by Microsoft. Therefore, you will need to install a code
 signing certificate manually if you want to install using the `.appx` package.
-The certificate must be installed in the "Trusted Root Certificate Store" of the
+The certificate must be installed in the "Trusted People" certificate store of the
 local machine.
 
 ## Instructions
@@ -25,8 +25,9 @@ local machine.
 
 ![screenshot3](img/cert/3.to-following.png)
 
-4. Select "Trusted Root Certification Authorities" and OK.
+4. Select "Trusted People" and OK.
 
-![screenshot4](img/cert/4.to-rootstore.png)
+![screenshot4](https://user-images.githubusercontent.com/1723612/127493579-76046893-cf56-4558-b144-3745ef11eb8b.png)
+
 
 5. done
