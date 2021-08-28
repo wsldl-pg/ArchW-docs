@@ -27,7 +27,7 @@ local machine.
 
 4. Select "Trusted People" and OK.
 
-![screenshot4](https://user-images.githubusercontent.com/1723612/127493579-76046893-cf56-4558-b144-3745ef11eb8b.png)
+![screenshot4](img/cert/4.to-trustedpeople.png)
 
 
 5. done
