@@ -17,7 +17,7 @@ You can install from archlinuxcn community repository (can auto-update, recommen
 ```
 echo "[archlinuxcn]
 Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
-sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
+sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
 ```
 or you can install from AUR helper
 ```
