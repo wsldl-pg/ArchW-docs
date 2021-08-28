@@ -33,6 +33,7 @@ If you rename it, you can have multiple installs.
 3. Install the `.appx`
 
 ## Setup after install
+### [If you are a WSL1 user, you **must** change the glibc package. Please see Known issues.](Known-issues.md#systemdsystemctl)
 
 ### Setting the root password
 
@@ -88,7 +89,11 @@ Please excute these commands to initialize the keyring.
 [root@PC-NAME]$ sudo pacman-key --populate
 ```
 
-### Install systemctl alternative (Optional)
+### Install patched glibc (need in WSL1)
+Arch's glibc is built for Linux kernel 4.4 and above and does not work with WSL1.
 
+WSL1 users **should** always follow the steps in [Known issues](Known-issues.md#systemdsystemctl).
+
+### Install systemctl alternative (Optional)
 WSL does not have support for systemd however, there are several solutions.
 Please see [Known issues](Known-issues.md#systemdsystemctl).

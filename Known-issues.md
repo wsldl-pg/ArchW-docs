@@ -7,9 +7,22 @@ title: "Known issues"
 Please see the [wsldl document](https://git.io/wsldl-doc).
 
 ## glibc
-The new version of glibc has compatibility issues with WSL1.
+The default glibc is optimized for the new kernel and uses syscall, which is not implemented in WSL1.
 
-Using WSL2 will avoid it.
+If you don't use glibc with a patch that isn't the mainline, your instance won't start.
+
+You can use `glibc-linux4`[ᴬᵁᴿ](https://aur.archlinux.org/packages/glibc-linux4) package instead.
+
+You can install from archlinuxcn community repository (can auto-update, recommend)
+```
+echo "[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
+sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
+```
+or you can install from AUR helper
+```
+yay -S glibc-linux4
+```
 
 ## fakeroot
 fakeroot is using SYSV IPC by default.
