@@ -58,7 +58,7 @@ sudo dbus-daemon --system
 ```
 
 ## systemd/systemctl
-WSL does not supports systemd.
+WSL does not supports systemd natively.
 I recommend use systemctl alternative script or bottle.
 
 ### WSL1 / WSL2
