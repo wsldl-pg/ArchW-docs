@@ -48,7 +48,7 @@ innodb_use_native_aio=0
 
 ## D-Bus
 Systemd D-Bus daemon doesn't work in WSL1.
-I recommend use `dbus-x11`[ᴬᵁᴿ](https://aur.archlinux.org/packages/dbus-x11/).
+We recommend using `dbus-x11`[ᴬᵁᴿ](https://aur.archlinux.org/packages/dbus-x11/).
 Download [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1-x86_64.pkg.tar.xz) and run ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` to install.
 
 For start D-Bus daemon, run:
@@ -58,7 +58,7 @@ sudo dbus-daemon --system
 ```
 
 ## systemd/systemctl
-WSL does not supports systemd natively, so I recommend using a systemctl alternative script or bottle for apps that require it.
+WSL does not supports systemd natively, so we recommend using a systemctl alternative script or bottle for apps that require it.
 
 ### WSL1 / WSL2
 You can use a systemctl alternative script.
