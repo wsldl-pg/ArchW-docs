@@ -93,9 +93,11 @@ net stop lxssmanager && net start lxssmanager
 ```
 
 ### 安装修改版 GLibc (WSL1 环境下必需)
-Arch Linux 的官方 glibc 包是为 Linux 4.4 以上版本设计的，因此在 WSL1 中会完全无法使用。
+Arch Linux 的官方 glibc 包是为新版内核（4.4以上版本）设计的，并且使用了未在 WSL1 被实现的系统调用。
 
-WSL1 用户 **必须** 跟随[这些](Known-issues.md#systemdsystemctl)步骤修改 GLibc 后才可使用。
+因此，如果你不使用打过 Patch 的 Glibc 包，你的实例会完全开不起来。
+
+WSL1 用户 **必须** 跟着[这些](Known-issues.md#systemdsystemctl)步骤修改 GLibc 后才可使用。
 
 ### 安装 systemctl 替代品（可选）
 
