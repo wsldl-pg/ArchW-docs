@@ -10,10 +10,22 @@ grand_parent: "Translations"
 请查看 [wsldl 的文档](https://git.io/wsldl-doc)。
 
 ## glibc
+Arch 默认的 Glibc 包是为新版本 Linux 内核的 syscall 设计的，而 WSL1 并不支持它们。
 
-新版的 glibc 和 WSL1 有兼容问题。
+因此，如果你不使用打过 Patch 的 Glibc 包，你的实例会完全开不起来。
 
-你可以降级 glibc 或者改用 WSL2 规避此问题。
+建议使用 AUR 中的 `glibc-linux4`[ᴬᵁᴿ](https://aur.archlinux.org/packages/glibc-linux4) 包。
+
+建议从 archlinuxcn 社区仓库安装此包，以方便自动更新。
+```
+echo "[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
+sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
+```
+当然，你也可以直接使用 AUR 助手安装。
+```
+yay -S glibc-linux4
+```
 
 ## fakeroot
 
@@ -56,8 +68,8 @@ sudo dbus-daemon --system
 
 ## systemd/systemctl
 
-WSL不支持 systemd。
-我建议使用 systemd 替代脚本或容器。
+WSL 并没有 systemd 的原生支持。
+如果你需要使用依赖 systemd 支持的程序，我们建议使用替代脚本或容器。
 
 ### WSL1 / WSL2
 
@@ -68,7 +80,7 @@ WSL不支持 systemd。
 
 ### WSL2
 
-你可以使用 systemd 容器 [subsystemctl](https://github.com/sorah/subsystemctl) 或是 [genie](https://github.com/arkane-systems/genie).
+你可以使用 systemd 容器 [subsystemctl](https://github.com/sorah/subsystemctl) 或是 [genie](https://github.com/arkane-systems/genie)。
 
 使用它们，你就可以使用完整的 systemd 了。
 
