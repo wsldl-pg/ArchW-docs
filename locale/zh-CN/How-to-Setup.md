@@ -36,7 +36,7 @@ has_children: true
 3. 双击安装 appx 文件。
 
 ## 完成安装后的操作
-### [若你使用 WSL1 ，你将**必须**修改一下 glibc 包。更多详情，请查看已知问题章节。](Known-issues.md#systemdsystemctl)
+### [若你使用 WSL1 ，你将**必须**修改一下 glibc 包。更多详情，请查看已知问题章节。](Known-issues.md#wsl1--wsl2)
 
 ### 设置Root密码
 
@@ -102,4 +102,4 @@ WSL1 用户 **必须** 跟着[这些](Known-issues.md#wsl1--wsl2)步骤修改 GL
 ### 安装 systemctl 替代品（可选）
 
 WSL 并不支持 systemd，但是也有一些解决方案。
-可以查看 [已知问题](Known-issues.md#wsl1--wsl2)。
+可以查看 [已知问题](Known-issues.md#systemdsystemctl)。
