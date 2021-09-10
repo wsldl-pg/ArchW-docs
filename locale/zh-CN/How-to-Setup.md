@@ -97,9 +97,9 @@ Arch Linux 的官方 glibc 包是为新版内核（4.4以上版本）设计的�
 
 因此，如果你不使用打过 Patch 的 Glibc 包，你的实例会完全开不起来。
 
-WSL1 用户 **必须** 跟着[这些](Known-issues.md#systemdsystemctl)步骤修改 GLibc 后才可使用。
+WSL1 用户 **必须** 跟着[这些](Known-issues.md#wsl1--wsl2)步骤修改 GLibc 后才可使用。
 
 ### 安装 systemctl 替代品（可选）
 
 WSL 并不支持 systemd，但是也有一些解决方案。
-可以查看 [已知问题](Known-issues.md#systemdsystemctl)。
+可以查看 [已知问题](Known-issues.md#wsl1--wsl2)。
