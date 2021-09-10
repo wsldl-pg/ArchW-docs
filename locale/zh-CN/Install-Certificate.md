@@ -26,6 +26,6 @@ ArchWSL 并不是 Microsoft 开发的。因此，你必须手动安装
 
 4. 现在选择“受信任人”。完成后点击确定。
 
-![screenshot4](img/cert/4.to-rootstore.png)
+![screenshot4](img/cert/4.to-trustedpeople.png)
 
 5. 安装完成！
