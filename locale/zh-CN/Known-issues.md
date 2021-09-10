@@ -68,8 +68,8 @@ sudo dbus-daemon --system
 
 ## systemd/systemctl
 
-WSL不支持 systemd。
-我建议使用 systemd 替代脚本或容器。
+WSL 并没有 systemd 的原生支持。
+如果你需要使用依赖 systemd 支持的程序，我们建议使用替代脚本或容器。
 
 ### WSL1 / WSL2
 
@@ -80,7 +80,7 @@ WSL不支持 systemd。
 
 ### WSL2
 
-你可以使用 systemd 容器 [subsystemctl](https://github.com/sorah/subsystemctl) 或是 [genie](https://github.com/arkane-systems/genie).
+你可以使用 systemd 容器 [subsystemctl](https://github.com/sorah/subsystemctl) 或是 [genie](https://github.com/arkane-systems/genie)。
 
 使用它们，你就可以使用完整的 systemd 了。
 
