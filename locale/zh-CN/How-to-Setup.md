@@ -36,6 +36,7 @@ has_children: true
 3. 双击安装 appx 文件。
 
 ## 完成安装后的操作
+### [若你使用 WSL1 ，你将**必须**修改一下 glibc 包。更多详情，请查看已知问题章节。](Known-issues.md#systemdsystemctl)
 
 ### 设置Root密码
 
@@ -82,7 +83,7 @@ net stop lxssmanager && net start lxssmanager
 ### 初始化密钥环（keyring）
 
 请执行这些命令以初始化密钥环（keyring）。
-(要使用 pacman，必须执行此步骤！)
+(必须执行此步骤才可以使用 Pacman)
 
 ```shell
 >Arch.exe
@@ -90,6 +91,11 @@ net stop lxssmanager && net start lxssmanager
 
 [root@PC-NAME]$ sudo pacman-key --populate
 ```
+
+### 安装修改版 GLibc (WSL1 环境下必需)
+Arch Linux 的官方 glibc 包是为 Linux 4.4 以上版本设计的，因此在 WSL1 中会完全无法使用。
+
+WSL1 用户 **必须** 跟随[这些](Known-issues.md#systemdsystemctl)步骤修改 GLibc 后才可使用。
 
 ### 安装 systemctl 替代品（可选）
 
