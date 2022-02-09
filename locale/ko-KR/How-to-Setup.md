@@ -40,7 +40,7 @@ ArchWSL을 설치하는 2가지 방법이 있습니다.
 
 ```shell
 >Arch.exe
-[root@PC-NAME user]# passwd
+[root@PC-NAME]# passwd
 ```
 
 ### 기본 유저 설정하기
@@ -58,10 +58,10 @@ ArchWiki를 참고하십시오.
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
 (유저 추가)
 
-[root@PC-NAME user]# passwd {username}
+[root@PC-NAME]# passwd {username}
 ({username}의 비밀번호 설정)
 
-[root@PC-NAME user]# exit
+[root@PC-NAME]# exit
 
 >Arch.exe config --default-user {username}
     ({username}을 기본 유저로 설정)
@@ -86,9 +86,9 @@ net stop lxssmanager && net start lxssmanager
 >Arch.exe
 [user@PC-NAME]$ sudo pacman-key --init
 
-[root@PC-NAME]$ sudo pacman-key --populate
+[user@PC-NAME]$ sudo pacman-key --populate
 
-[root@PC-NAME]$ sudo pacman -Syy archlinux-keyring
+[user@PC-NAME]$ sudo pacman -Syy archlinux-keyring
 ```
 
 ### systemctl 설치하기(선택)
