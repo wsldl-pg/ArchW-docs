@@ -87,6 +87,8 @@ Please excute these commands to initialize the keyring.
 [user@PC-NAME]$ sudo pacman-key --init
 
 [root@PC-NAME]$ sudo pacman-key --populate
+
+[root@PC-NAME]$ sudo pacman -Syy archlinux-keyring
 ```
 
 ### Install patched glibc (need in WSL1)
