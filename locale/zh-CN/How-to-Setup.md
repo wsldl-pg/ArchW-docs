@@ -54,8 +54,7 @@ has_children: true
 
 ```shell
 >Arch.exe
-[root@PC-NAME]# EDITOR=nano visudo
-    %wheel      ALL=(ALL) ALL
+[root@PC-NAME]# echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
     (设置 sudoers 文件。)
 
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
