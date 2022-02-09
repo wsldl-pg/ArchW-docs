@@ -87,6 +87,8 @@ net stop lxssmanager && net start lxssmanager
 [user@PC-NAME]$ sudo pacman-key --init
 
 [root@PC-NAME]$ sudo pacman-key --populate
+
+[root@PC-NAME]$ sudo pacman -Syy archlinux-keyring
 ```
 
 ### systemctl 설치하기(선택)

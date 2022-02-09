@@ -90,6 +90,8 @@ net stop lxssmanager && net start lxssmanager
 [user@PC-NAME]$ sudo pacman-key --init
 
 [root@PC-NAME]$ sudo pacman-key --populate
+
+[root@PC-NAME]$ sudo pacman -Syy archlinux-keyring
 ```
 
 ### 安装修改版 GLibc (WSL1 环境下必需)
