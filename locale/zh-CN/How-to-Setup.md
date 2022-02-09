@@ -42,7 +42,7 @@ has_children: true
 
 ```shell
 >Arch.exe
-[root@PC-NAME user]# passwd
+[root@PC-NAME]# passwd
 ```
 
 ### 设置默认用户
@@ -61,10 +61,10 @@ has_children: true
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
 (添加用户)
 
-[root@PC-NAME user]# passwd {username}
+[root@PC-NAME]# passwd {username}
 (设置默认用户密码)
 
-[root@PC-NAME user]# exit
+[root@PC-NAME]# exit
 
 >Arch.exe config --default-user {username}
     (设置默认用户)
@@ -89,9 +89,9 @@ net stop lxssmanager && net start lxssmanager
 >Arch.exe
 [user@PC-NAME]$ sudo pacman-key --init
 
-[root@PC-NAME]$ sudo pacman-key --populate
+[user@PC-NAME]$ sudo pacman-key --populate
 
-[root@PC-NAME]$ sudo pacman -Syy archlinux-keyring
+[user@PC-NAME]$ sudo pacman -Syy archlinux-keyring
 ```
 
 ### 安装修改版 GLibc (WSL1 环境下必需)
