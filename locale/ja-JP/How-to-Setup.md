@@ -39,7 +39,7 @@ exeファイルのファイル名がWSLのインスタンス名に使用され�
 
 ```shell
 >Arch.exe
-[root@PC-NAME user]# passwd
+[root@PC-NAME]# passwd
 ```
 
 ### デフォルトユーザーの設定
@@ -56,10 +56,10 @@ ArchWikiを参照してください。
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
 ({username}というユーザーを追加します)
 
-[root@PC-NAME user]# passwd {username}
+[root@PC-NAME]# passwd {username}
 ({username}というユーザーにパスワードを設定します)
 
-[root@PC-NAME user]# exit
+[root@PC-NAME]# exit
 
 >Arch.exe config --default-user {username}
     (デフォルトのユーザーを{username}に設定します)
@@ -83,9 +83,9 @@ net stop lxssmanager && net start lxssmanager
 >Arch.exe
 [user@PC-NAME]$ sudo pacman-key --init
 
-[root@PC-NAME]$ sudo pacman-key --populate
+[user@PC-NAME]$ sudo pacman-key --populate
 
-[root@PC-NAME]$ sudo pacman -Syy archlinux-keyring
+[user@PC-NAME]$ sudo pacman -Syy archlinux-keyring
 ```
 
 ### systemctl代替ツールをインストール (任意)
