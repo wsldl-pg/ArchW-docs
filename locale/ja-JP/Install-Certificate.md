@@ -4,29 +4,27 @@ parent: "インストール方法"
 #nav_order:
 ---
 
-# Install Certificate for AppX
+# AppX用の証明書をインストールする
 
-ArchWSL is not approved by Microsoft. Therefore, you will need to install a code
-signing certificate manually if you want to install using the `.appx` package.
-The certificate must be installed in the "Trusted Root Certificate Store" of the
-local machine.
+ArchWSLはMicrosoftの承認を受けていません。そのため、`.appx`パッケージを使用してインストールする場合は、署名証明書を手動で取得する必要があります。
+証明書は、ローカルマシンの「信頼されたルート証明書ストア」にインストールされている必要があります。
 
-## Instructions
+## 手順
 
-1. Open the .cer file and click "Install Certificate".
+1. `.cer`ファイルを開き、「証明書のインストール」をクリックします。
 
 ![screenshot1](img/cert/1.install.png)
 
-2. Select "Local Machine" and Next.
+2. 「ローカルコンピューター」を選択し、「次へ」をクリックします。
 
 ![screenshot2](img/cert/2.to-localmachine.png)
 
-3. Select "Place ~ in the following store" and Click Browse to select installation destination.
+3. 「証明書をすべて次のストアに配置する」を選択し、「参照」をクリックしてインストール先を選択します。
 
 ![screenshot3](img/cert/3.to-following.png)
 
-4. Select "Trusted Root Certification Authorities" and OK.
+4. 「信頼されたルート証明機関」を選択し、OKを押す。
 
 ![screenshot4](img/cert/4.to-rootstore.png)
 
-5. done
+5. インストール完了！
