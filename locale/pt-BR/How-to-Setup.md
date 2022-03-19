@@ -1,5 +1,7 @@
 ---
 title: "Como configurar"
+parent: "Início"
+grand_parent: "Translations"
 has_children: true
 ---
 # Como configurar o ArchWSL
@@ -18,7 +20,7 @@ Existem duas maneiras de instalar o ArchWSL.
 1. [Baixe](https://github.com/yuk7/ArchWSL/releases/latest) o zip do instalador.
 2. Extraia todos os arquivos do arquivo zip para o mesmo diretório.
    Extraia para uma pasta que você tenha permissão de gravação.
-   Por exemplo, `C:\Program Files` não pode ser usada porque o rootfs não pode ser modificado lá.
+   Por exemplo, `C:\Arquivos de Progamas` não pode ser usada porque o rootfs não pode ser modificado lá.
 3. Execute `Arch.exe` para extrair o rootfs e registre no WSL
 
 Note que o nome do executável é o que é usado como o nome da instância WSL.
@@ -47,7 +49,7 @@ Se você renomeá-lo, poderá ter várias instalações.
 Veja
 [Sudo](https://wiki.archlinux.org/index.php/Sudo#Example_entries)
 e
-[User and groups](https://wiki.archlinux.org/index.php/Users_and_groups).
+[Users and groups](https://wiki.archlinux.org/index.php/Users_and_groups)
 no ArchWiki
 
 ```shell
@@ -78,7 +80,7 @@ Para reiniciar o `LxssManager`, execute isto:
 net stop lxssmanager && net start lxssmanager
 ```
 
-### Inicializar chaveiro
+### Inicializar o chaveiro
 
 Execute estes comandos para inicializar o chaveiro.
 (Esta etapa é necessária para usar o pacman.)
@@ -97,6 +99,6 @@ O glibc do Arch é construído para o kernel Linux 4.4 e superior e não funcion
 
 Os usuários do WSL1 **devem** sempre seguir as etapas em [Problemas conhecidos](Known-issues.md#wsl1--wsl2).
 
-### Instalar a alternativa systemctl (opcional)
+### Instalar uma alternativa para o systemctl (opcional)
 O WSL não tem suporte a systemd. No entanto, existem várias soluções.
 Consulte [Problemas conhecidos](Known-issues.md#systemdsystemctl).

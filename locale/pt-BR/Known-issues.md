@@ -1,10 +1,12 @@
 ---
 title: "Problemas conhecidos"
+parent: "Início"
+grand_parent: "Translations"
 ---
 # Problemas conhecidos
 
 ## Iniciador e Comum
-Consulte o [documento wsldl](https://git.io/wsldl-doc).
+Consulte a [documentação do wsldl](https://git.io/wsldl-doc).
 
 ## glibc
 O glibc padrão é otimizado para o novo kernel e usa syscall, que não é implementado no WSL1.
@@ -25,12 +27,11 @@ yay -S glibc-linux4
 ```
 
 ## fakeroot
-fakeroot está usando SYSV IPC por padrão.
-mas o WSL1 não o suporta agora.
+fakeroot está usando SYSV IPC por padrão, mas o WSL1 não o suporta agora.
 
-Você pode usar o pacote `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) em vez disso. (WSL2 não exige isso)
+Você pode usar o pacote `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) em vez disso. (WSL2 não precisa disso)
 
-Baixe [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg .tar.xz) e execute ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` para instalar.
+Baixe [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz) e execute ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` para instalar.
 
 ## Qt5
 A biblioteca qt >=5.10 não funciona no WSL1. Este é um problema com o WSL. (Consulte [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
@@ -49,7 +50,7 @@ innodb_use_native_aio=0
 ## D-Bus
 O daemon Systemd D-Bus não funciona no WSL1.
 Recomendamos usar `dbus-x11`[ᴬᵁᴿ](https://aur.archlinux.org/packages/dbus-x11/).
-Baixe [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1 -x86_64.pkg.tar.xz) e execute ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` para instalar.
+Baixe [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1-x86_64.pkg.tar.xz) e execute ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` para instalar.
 
 Para iniciar o daemon D-Bus, execute:
 ```
@@ -64,19 +65,19 @@ O WSL não oferece suporte ao systemd nativamente, portanto, recomendamos o uso 
 Você pode usar um script alternativo para systemctl.
 No entanto, isso é apenas parcialmente compatível.
 
-Baixe [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl -1.4.4181-1-any.pkg.tar.xz) e execute ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` para instalar.
+Baixe [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) e execute ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` para instalar.
 
 ### WSL2
-Você pode usar bottle de systemd  "[subsystemctl](https://github.com/sorah/subsystemctl)", "[genie](https://github.com/arkane-systems/genie)", "[wsl-distrod](https://github.com/nullpo-head/wsl-distrod)" ou "[bottled-shell](https://github.com/lungothrin/bottled-shell)".
+Você pode usar bottle de systemd "[subsystemctl](https://github.com/sorah/subsystemctl)", "[genie](https://github.com/arkane-systems/genie)", "[wsl-distrod](https://github.com/nullpo-head/wsl-distrod)" ou "[bottled-shell](https://github.com/lungothrin/bottled-shell)".
 
 O uso de qualquer uma das soluções mencionadas permitirá que você execute o systemd completamente.
 
 #### subsystemctl
-Você pode baixar [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) e construí-lo.
+Você pode baixar o [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) e compilá-lo.
 
 [Veja aqui como usá-lo.](https://github.com/sorah/subsystemctl#usage)
 
 #### genie
-Você pode usar [PKGBUILDs daqui](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
+Você pode usar os [PKGBUILDs daqui](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
 
 [Veja aqui como usá-lo.](https://github.com/arkane-systems/genie#usage)

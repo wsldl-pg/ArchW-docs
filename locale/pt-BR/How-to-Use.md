@@ -1,5 +1,7 @@
 ---
 title: "Como usar"
+parent: "Início"
+grand_parent: "Translations"
 ---
 # Como usar (após a instalação do ArchWSL)
 
@@ -19,14 +21,14 @@ Uso:
     config [configuração [valor]]
       - `--default-user <usuário>`: Define o usuário padrão desta instância para <usuário>.
       - `--default-uid <uid>`: Define o uid de usuário padrão desta instância para <uid>.
-      - `--append-path <true|false>`: Troca de Append Windows PATH para $PATH
+      - `--append-path <true|false>`: Ativa ou desativa a anexação do Windows PATH para $PATH
       - `--mount-drive <true|false>`: Ativa ou desativa a unidades de montagem
       - `--wsl-version <1|2>`: Define a versão do WSL desta instância para <1 ou 2>
       - `--default-term <default|wt|flute>`: Define o tipo padrão da janela do terminal.
 
     get [configuração]
       - `--default-uid`: Obtém o uid de usuário padrão nesta instância.
-      - `--append-path`: Obtém o status true/false de Append Windows PATH para $PATH.
+      - `--append-path`: Obtém o status true/false de anexação do Windows PATH para $PATH.
       - `--mount-drive`: Obtém o status true/false das unidades de montagem.
       - `--wsl-version`: Obtém a versão do WSL (1/2) desta instância.
       - `--default-term`: Obtém o tipo de terminal padrão deste lançador de instâncias.
@@ -88,7 +90,7 @@ Para reiniciar o `LxssManager`, execute isto:
 net stop lxssmanager && net start lxssmanager
 ```
 
-## Fazer backup de rootfs
+## Fazer backup do rootfs
 
 Fazer o backup:
 
