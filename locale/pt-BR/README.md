@@ -14,4 +14,4 @@ has_children: true
 
 [Problemas conhecidos](Known-issues.md)
 
-[Translations](../Translations.md)
+[Traduções](../Translations.md)
