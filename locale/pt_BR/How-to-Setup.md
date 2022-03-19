@@ -1,101 +1,102 @@
 ---
-title: "How to Setup"
+title: "Como configurar"
 has_children: true
 ---
-# How to Set Up ArchWSL
+# Como configurar o ArchWSL
 
-## Requirements
+## Requisitos
 
-* Windows 10 1709 Fall Creators Update 64bit or later.
-* Windows Subsystem for Linux feature is enabled.
+* Windows 10 1709 Fall Creators Update 64 bits ou posterior.
+* O recurso Windows Subsystem for Linux estar ativado.
 
-## Installation Instructions
+## Instruções de instalação
 
-There are two ways to install ArchWSL.
+Existem duas maneiras de instalar o ArchWSL.
 
-### Method 1: zip file
+### Método 1: arquivo zip
 
-1. [Download](https://github.com/yuk7/ArchWSL/releases/latest) the installer zip.
-2. Extract all files in zip file to the same directory.
-   Please extract to a folder that you have write permission.
-   For example, `C:\Program Files` cannot be used since the rootfs cannot be modified there.
-3. Run `Arch.exe` to extract the rootfs and register to WSL
+1. [Baixe](https://github.com/yuk7/ArchWSL/releases/latest) o zip do instalador.
+2. Extraia todos os arquivos do arquivo zip para o mesmo diretório.
+   Extraia para uma pasta que você tenha permissão de gravação.
+   Por exemplo, `C:\Program Files` não pode ser usada porque o rootfs não pode ser modificado lá.
+3. Execute `Arch.exe` para extrair o rootfs e registre no WSL
 
-As a side note, the executable name is what is used as the WSL instance name.
-If you rename it, you can have multiple installs.
+Note que o nome do executável é o que é usado como o nome da instância WSL.
+Se você renomeá-lo, poderá ter várias instalações.
 
-### Method 2: appx package
+### Método 2: pacote appx
 
-1. [Download the `.appx` and `.cer`](https://github.com/yuk7/ArchWSL/releases/latest)
-2. Install `.cer` to the "Trusted Root Certificate Store" of the local machine.
-   For details, please refer to the [Install Certificate page](Install-Certificate.md).
-   You will need administrator privileges to install the certificate.
-3. Install the `.appx`
+1. [Baixe o `.appx` e o `.cer`](https://github.com/yuk7/ArchWSL/releases/latest)
+2. Instale o `.cer` no "Armazenamento de Autoridades de Certificação Confiáveis" da máquina local.
+   Para obter detalhes, consulte a [página Instalar certificado](Install-Certificate.md).
+   Você precisará de privilégios de administrador para instalar o certificado.
+3. Instale o `.appx`
 
-## Setup after install
-### [If you are a WSL1 user, you **must** change the glibc package. Please see Known issues.](Known-issues.md#wsl1--wsl2)
+## Configuração após a instalação
+### [Se você é um usuário do WSL1, você **deve** alterar o pacote glibc. Consulte Problemas conhecidos.](Known-issues.md#wsl1--wsl2)
 
-### Setting the root password
+### Configurando a senha de root
 
 ```shell
 >Arch.exe
-[root@PC-NAME]# passwd
+[root@NOME-PC]# passwd
 ```
 
-### Set up the default user
+### Configurar o usuário padrão
 
-Please see ArchWiki
+Veja
 [Sudo](https://wiki.archlinux.org/index.php/Sudo#Example_entries)
-and
-[User and groups](https://wiki.archlinux.org/index.php/Users_and_groups) pages.
+e
+[User and groups](https://wiki.archlinux.org/index.php/Users_and_groups).
+no ArchWiki
 
 ```shell
 >Arch.exe
-[root@PC-NAME]# echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
-(setup sudoers file.)
+[root@NOME-PC]# echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+(configurar o arquivo sudoers.)
 
-[root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
-(add user)
+[root@NOME-PC]# useradd -m -G wheel -s /bin/bash {usuário}
+(adicionar usuário)
 
-[root@PC-NAME]# passwd {username}
-(set default user password)
+[root@NOME-PC]# passwd {usuário}
+(definir senha de usuário padrão)
 
-[root@PC-NAME]# exit
+[root@NOME-PC]# exit
 
->Arch.exe config --default-user {username}
-    (setting to default user)
+>Arch.exe config --default-user {usuário}
+    (configuração para usuário padrão)
 ```
 
-If the default user has not been changed
+Se o usuário padrão não foi alterado
 ([issue #7](https://github.com/yuk7/ArchWSL/issues/7)),
-please reboot the computer or alternatively, restart the LxssManager in an Admin
-command prompt.
+reinicie o computador ou, alternativamente, reinicie o LxssManager em um prompt de
+comando de Administrador.
 
-To restart the `LxssManager`, run this:
+Para reiniciar o `LxssManager`, execute isto:
 
 ```batch
 net stop lxssmanager && net start lxssmanager
 ```
 
-### Initialize keyring
+### Inicializar chaveiro
 
-Please excute these commands to initialize the keyring.
-(This step is necessary to use pacman.)
+Execute estes comandos para inicializar o chaveiro.
+(Esta etapa é necessária para usar o pacman.)
 
 ```shell
 >Arch.exe
-[user@PC-NAME]$ sudo pacman-key --init
+[usuario@NOME-PC]$ sudo pacman-key --init
 
-[user@PC-NAME]$ sudo pacman-key --populate
+[usuario@NOME-PC]$ sudo pacman-key --populate
 
-[user@PC-NAME]$ sudo pacman -Syy archlinux-keyring
+[usuario@NOME-PC]$ sudo pacman -Syy archlinux-keyring
 ```
 
-### Install patched glibc (need in WSL1)
-Arch's glibc is built for Linux kernel 4.4 and above and does not work with WSL1.
+### Instalar o glibc corrigido (necessário no WSL1)
+O glibc do Arch é construído para o kernel Linux 4.4 e superior e não funciona com o WSL1.
 
-WSL1 users **should** always follow the steps in [Known issues](Known-issues.md#wsl1--wsl2).
+Os usuários do WSL1 **devem** sempre seguir as etapas em [Problemas conhecidos](Known-issues.md#wsl1--wsl2).
 
-### Install systemctl alternative (Optional)
-WSL does not have support for systemd however, there are several solutions.
-Please see [Known issues](Known-issues.md#systemdsystemctl).
+### Instalar a alternativa systemctl (opcional)
+O WSL não tem suporte a systemd. No entanto, existem várias soluções.
+Consulte [Problemas conhecidos](Known-issues.md#systemdsystemctl).
