@@ -1,16 +1,17 @@
 ---
 layout: default
-title: Home
-nav_order: 1
-description: "The beginning of the world"
-permalink: /
+title: "Início"
+parents: "Translations"
+description: "O início do mundo"
+permalink: /locale/pt-BR/
+has_children: true
 ---
 
-# ArchWSL documentation
-[How to Setup](How-to-Setup.md)
+# Documentação do ArchWSL
+[Como configurar](How-to-Setup.md)
 
-[How to Use](How-to-Use.md)
+[Como usar](How-to-Use.md)
 
-[Known issues](Known-issues.md)
+[Problemas conhecidos](Known-issues.md)
 
-[Translations](locale/Translations.md)
+[Translations](../Translations.md)
