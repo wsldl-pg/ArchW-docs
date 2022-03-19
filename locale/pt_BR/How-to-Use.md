@@ -1,113 +1,113 @@
 ---
-title: "How to Use"
+title: "Como usar"
 ---
-# How to Use (after ArchWSL is installed)
+# Como usar (após a instalação do ArchWSL)
 
-## exe Usage
+## Uso do exe
 
 ```
-Usage :
-    <no args>
-      - Open a new shell with your default settings.
+Uso:
+    <sem argumentos>
+      - Abre um novo shell com suas configurações padrão.
 
-    run <command line>
-      - Run the given command line in that instance. Inherit current directory.
+    run <linha de comando>
+      - Executa a linha de comando fornecida nessa instância. Herda o diretório atual.
 
-    runp <command line (includes windows path)>
-      - Run the given command line in that instance after converting its path.
+    runp <linha de comando (inclui o caminho do Windows)>
+      - Executa a linha de comando fornecida nessa instância após converter seu caminho.
 
-    config [setting [value]]
-      - `--default-user <user>`: Set the default user of this instance to <user>.
-      - `--default-uid <uid>`: Set the default user uid of this instance to <uid>.
-      - `--append-path <true|false>`: Switch of Append Windows PATH to $PATH
-      - `--mount-drive <true|false>`: Switch of Mount drives
-      - `--wsl-version <1|2>`: Set the WSL version of this instance to <1 or 2>
-      - `--default-term <default|wt|flute>`: Set default type of terminal window.
+    config [configuração [valor]]
+      - `--default-user <usuário>`: Define o usuário padrão desta instância para <usuário>.
+      - `--default-uid <uid>`: Define o uid de usuário padrão desta instância para <uid>.
+      - `--append-path <true|false>`: Troca de Append Windows PATH para $PATH
+      - `--mount-drive <true|false>`: Ativa ou desativa a unidades de montagem
+      - `--wsl-version <1|2>`: Define a versão do WSL desta instância para <1 ou 2>
+      - `--default-term <default|wt|flute>`: Define o tipo padrão da janela do terminal.
 
-    get [setting]
-      - `--default-uid`: Get the default user uid in this instance.
-      - `--append-path`: Get true/false status of Append Windows PATH to $PATH.
-      - `--mount-drive`: Get true/false status of Mount drives.
-      - `--wsl-version`: Get the version os the WSL (1/2) of this instance.
-      - `--default-term`: Get Default Terminal type of this instance launcher.
-      - `--lxguid`: Get WSL GUID key for this instance.
+    get [configuração]
+      - `--default-uid`: Obtém o uid de usuário padrão nesta instância.
+      - `--append-path`: Obtém o status true/false de Append Windows PATH para $PATH.
+      - `--mount-drive`: Obtém o status true/false das unidades de montagem.
+      - `--wsl-version`: Obtém a versão do WSL (1/2) desta instância.
+      - `--default-term`: Obtém o tipo de terminal padrão deste lançador de instâncias.
+      - `--lxguid`: Obtém a chave WSL GUID para esta instância.
 
-    backup [contents]
-      - `--tar`: Output backup.tar to the current directory.
-      - `--tgz`: Output backup.tar.tar to the current directory.
-      - `--vhdx`: Output backup.ext4.vhdx to the current directory. (WSL2 only)
-      - `--vhdxgz`: Output backup.ext4.vhdx.gz to the current directory. (WSL2 only)
-      - `--reg`: Output settings registry file to the current directory.
+    backup [conteúdo]
+      - `--tar`: Gera backup.tar no diretório atual.
+      - `--tgz`: Gera backup.tar.tar no diretório atual.
+      - `--vhdx`: Gera backup.ext4.vhdx no diretório atual. (somente WSL2)
+      - `--vhdxgz`: Gera backup.ext4.vhdx.gz no diretório atual. (somente WSL2)
+      - `--reg`: Gera um arquivo de registro de configurações no diretório atual.
 
     clean
-      - Uninstall that instance.
+      - Desinstala essa instância.
 
     help
-      - Print this usage message.
+      - Imprime esta mensagem de uso.
 ```
 
 
-## Open an interactive shell
+## Abrir um shell interativo
 
 ```
 >Arch.exe
-[root@PC-NAME user]#
+[root@NOME-PC usuario]#
 ```
 
-## Run a single command and exit
+## Executar um único comando e sair
 
 ```
 >Arch.exe run uname -r
 4.4.0-43-Microsoft
 ```
 
-## Run a command with path translation and exit
+## Executar um comando com tradução de caminho e sair
 
 ```
 >Arch.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
 ```
 
-## Change Default User (id command required)
+## Alterar o usuário padrão (comando id necessário)
 
 ```
->Arch.exe config --default-user user
+>Arch.exe config --default-user usuario
 
 >Arch.exe
-[user@PC-NAME dir]$
+[usuario@NOME-PC dir]$
 ```
 
-If the default user has not been changed
+Se o usuário padrão não foi alterado
 ([issue #7](https://github.com/yuk7/ArchWSL/issues/7)),
-please reboot the computer or alternatively, restart the LxssManager in an Admin
-command prompt.
+reinicie o computador ou, alternativamente, reinicie o LxssManager em um prompt de
+comando de Administrador.
 
-To restart the `LxssManager`, run this:
+Para reiniciar o `LxssManager`, execute isto:
 
 ```batch
 net stop lxssmanager && net start lxssmanager
 ```
 
-## Backup Rootfs
+## Fazer backup de rootfs
 
-Backup:
+Fazer o backup:
 
 ```
 >Arch.exe backup
 ```
 
-Restore/install backup tarball:
+Restaurar/instalar o tarball de backup:
 
 ```
->Arch.exe install full/path/to/backup.tar.gz
+>Arch.exe install caminho/completo/para/o/backup.tar.gz
 ```
 
-Restore/install backup vhdx:
+Restaurar/instalar backup vhdx:
 ```
->Arch.exe install full/path/to/backup.ext4.vhdx.gz
+>Arch.exe install caminho/completo/para/o/backup.ext4.vhdx.gz
 ```
 
-## Uninstall Instance
+## Desinstalar a instância
 
 ```
 >Arch.exe clean
