@@ -1,82 +1,82 @@
 ---
-title: "Known issues"
+title: "Problemas conhecidos"
 ---
-# Known issues
+# Problemas conhecidos
 
-## Launcher and Common
-Please see the [wsldl document](https://git.io/wsldl-doc).
+## Iniciador e Comum
+Consulte o [documento wsldl](https://git.io/wsldl-doc).
 
 ## glibc
-The default glibc is optimized for the new kernel and uses syscall, which is not implemented in WSL1.
+O glibc padrão é otimizado para o novo kernel e usa syscall, que não é implementado no WSL1.
 
-If you don't use glibc with a patch that isn't the mainline, your instance won't start.
+Se você não usar glibc com um patch que não seja a linha principal, sua instância não será iniciada.
 
-You can use `glibc-linux4`[ᴬᵁᴿ](https://aur.archlinux.org/packages/glibc-linux4) package instead.
+Você pode usar o pacote `glibc-linux4`[ᴬᵁᴿ](https://aur.archlinux.org/packages/glibc-linux4) em vez disso.
 
-You can install from archlinuxcn community repository (can auto-update, recommend)
+Você pode instalar a partir do repositório da comunidade archlinuxcn (pode atualizar automaticamente, recomendado)
 ```
 echo "[archlinuxcn]
 Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
 ```
-or you can install from AUR helper
+ou você pode instalar a partir com um auxiliar do AUR ("AUR helper")
 ```
 yay -S glibc-linux4
 ```
 
 ## fakeroot
-fakeroot is using SYSV IPC by default.
-but WSL1 does not support it now.
+fakeroot está usando SYSV IPC por padrão.
+mas o WSL1 não o suporta agora.
 
-You can use `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) package instead. (WSL2 doesn't require that)
+Você pode usar o pacote `fakeroot-tcp`[ᴬᵁᴿ](https://aur.archlinux.org/packages/fakeroot-tcp/) em vez disso. (WSL2 não exige isso)
 
-Download [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz) and run ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` to install.
+Baixe [fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/18082100/fakeroot-tcp-1.23-1-x86_64.pkg .tar.xz) e execute ```pacman -U fakeroot-tcp-1.23-1-x86_64.pkg.tar.xz``` para instalar.
 
 ## Qt5
-qt >=5.10 library doesn't work in WSL1. This is an issue with WSL.(Please see [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
+A biblioteca qt >=5.10 não funciona no WSL1. Este é um problema com o WSL. (Consulte [Microsoft/WSL#3023](https://github.com/Microsoft/WSL/issues/3023))
 
-Please execute this line on root:
+Execute esta linha na raiz:
 ```strip --remove-section=.note.ABI-tag /usr/lib/libQt5Core.so.5```
 
 ## MySQL 8/MariaDB
-MySQL >=8 uses the native AIO interface by default. WSL1 does not support it, so you need to configure it.
-Edit /etc/my.cnf.d/server.cnf for add `innodb_use_native_aio=0` to `[mysqld]` section.
+MySQL >=8 usa a interface AIO nativa por padrão. O WSL1 não tem suporte a ela, então você precisa configurá-la.
+Edite /etc/my.cnf.d/server.cnf para adicionar `innodb_use_native_aio=0` à seção `[mysqld]`.
 ```
 [mysqld]
 innodb_use_native_aio=0
 ```
 
 ## D-Bus
-Systemd D-Bus daemon doesn't work in WSL1.
-We recommend using `dbus-x11`[ᴬᵁᴿ](https://aur.archlinux.org/packages/dbus-x11/).
-Download [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1-x86_64.pkg.tar.xz) and run ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` to install.
+O daemon Systemd D-Bus não funciona no WSL1.
+Recomendamos usar `dbus-x11`[ᴬᵁᴿ](https://aur.archlinux.org/packages/dbus-x11/).
+Baixe [dbus-x11-1.12.16-1-x86_64.pkg.tar.xz](https://github.com/yuk7/arch-prebuilt/releases/download/20051200/dbus-x11-1.12.16-1 -x86_64.pkg.tar.xz) e execute ```pacman -U dbus-x11-1.12.16-1-x86_64.pkg.tar.xz``` para instalar.
 
-For start D-Bus daemon, run:
+Para iniciar o daemon D-Bus, execute:
 ```
 sudo mkdir /run/dbus -p
 sudo dbus-daemon --system
 ```
 
 ## systemd/systemctl
-WSL does not supports systemd natively, so we recommend using a systemctl alternative script or bottle for apps that require it.
+O WSL não oferece suporte ao systemd nativamente, portanto, recomendamos o uso de um script alternativo para systemctl ou bottle para aplicativos que o exigem.
 
 ### WSL1 / WSL2
-You can use a systemctl alternative script.
-However, this is only partially compatible.
+Você pode usar um script alternativo para systemctl.
+No entanto, isso é apenas parcialmente compatível.
 
-Download [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` to install.
+Baixe [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl -1.4.4181-1-any.pkg.tar.xz) e execute ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` para instalar.
 
 ### WSL2
-You can use systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)", "[genie](https://github.com/arkane-systems/genie)", "[wsl-distrod](https://github.com/nullpo-head/wsl-distrod)" or "[bottled-shell](https://github.com/lungothrin/bottled-shell)".
+Você pode usar bottle de systemd  "[subsystemctl](https://github.com/sorah/subsystemctl)", "[genie](https://github.com/arkane-systems/genie)", "[wsl-distrod](https://github.com/nullpo-head/wsl-distrod)" ou "[bottled-shell](https://github.com/lungothrin/bottled-shell)".
 
-Using any of the aformentioned solutions, will allow you to run systemd completely.
+O uso de qualquer uma das soluções mencionadas permitirá que você execute o systemd completamente.
 
 #### subsystemctl
-You can download [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) and build it.
+Você pode baixar [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) e construí-lo.
 
-[See here for how to use it.](https://github.com/sorah/subsystemctl#usage)
+[Veja aqui como usá-lo.](https://github.com/sorah/subsystemctl#usage)
 
 #### genie
-You can use [PKGBUILDs from here](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
+Você pode usar [PKGBUILDs daqui](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
 
-[See here for how to use it.](https://github.com/arkane-systems/genie#usage)
+[Veja aqui como usá-lo.](https://github.com/arkane-systems/genie#usage)
