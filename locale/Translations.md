@@ -12,3 +12,5 @@ has_children: true
 [Simplified Chinese（简体中文）](zh-CN/README.md)
 
 [Korean (한국어) ](ko-KR/README.md)
+
+[Brazilian Portuguese (Português Brasileiro)](pt-BR/README.md)
