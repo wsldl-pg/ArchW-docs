@@ -1,33 +1,32 @@
 ---
-title: Install Certificate for AppX
-parent: "How to Setup"
+title: Instalar certificado para AppX
+parent: "Como configurar"
 #nav_order:
 ---
 
-# Install Certificate for AppX
+# Instalar certificado para AppX
 
-ArchWSL is not approved by Microsoft. Therefore, you will need to install a code
-signing certificate manually if you want to install using the `.appx` package.
-The certificate must be installed in the "Trusted People" certificate store of the
-local machine.
+ArchWSL não é aprovado pela Microsoft. Portanto, você precisará instalar um código
+assinando o certificado manualmente se você deseja instalar usando o pacote `.appx`.
+O certificado deve ser instalado no repositório de certificados "Pessoas Confiáveis"
+da máquina local.
 
-## Instructions
+## Instruções
 
-1. Open the .cer file and click "Install Certificate".
+1. Abra o arquivo .cer e clique em "Instalar Certificado".
 
-![screenshot1](img/cert/1.install.png)
+![captura de tela 1](img/cert/1.install.png)
 
-2. Select "Local Machine" and Next.
+2. Selecione "Máquina Local" e Avançar.
 
-![screenshot2](img/cert/2.to-localmachine.png)
+![captura de tela 2](img/cert/2.to-localmachine.png)
 
-3. Select "Place ~ in the following store" and Click Browse to select installation destination.
+3. Selecione "Colocar todos os certificados no repositório a seguir" e clique em Procurar para selecionar o destino da instalação.
 
-![screenshot3](img/cert/3.to-following.png)
+![captura de tela 3](img/cert/3.to-following.png)
 
-4. Select "Trusted People" and OK.
+4. Selecione "Pessoas Confiáveis" e OK.
 
-![screenshot4](img/cert/4.to-trustedpeople.png)
+![captura de tela 4](img/cert/4.to-trustedpeople.png)
 
-
-5. done
+5. feito
