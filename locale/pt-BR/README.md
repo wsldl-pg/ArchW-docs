@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Início"
-parents: "Translations"
+parent: "Translations"
 description: "O início do mundo"
 permalink: /locale/pt-BR/
 has_children: true
