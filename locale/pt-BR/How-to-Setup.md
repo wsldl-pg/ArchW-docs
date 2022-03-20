@@ -1,6 +1,6 @@
 ---
 title: "Como configurar"
-parent: "Início"
+parent: "Português Brasileiro"
 grand_parent: "Translations"
 has_children: true
 ---

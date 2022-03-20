@@ -1,6 +1,6 @@
 ---
 title: "Como usar"
-parent: "Início"
+parent: "Português Brasileiro"
 grand_parent: "Translations"
 ---
 # Como usar (após a instalação do ArchWSL)

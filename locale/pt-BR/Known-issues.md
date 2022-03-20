@@ -1,6 +1,6 @@
 ---
 title: "Problemas conhecidos"
-parent: "Início"
+parent: "Português Brasileiro"
 grand_parent: "Translations"
 ---
 # Problemas conhecidos
