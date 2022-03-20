@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Início"
+title: "Português Brasileiro"
 parent: "Translations"
 description: "O início do mundo"
 permalink: /locale/pt-BR/
