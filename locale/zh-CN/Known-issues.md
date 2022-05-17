@@ -18,8 +18,8 @@ Arch 默认的 Glibc 包是为新版本 Linux 内核的 syscall 设计的，而 
 
 建议从 archlinuxcn 社区仓库安装此包，以方便自动更新。
 ```
-echo "[archlinuxcn]
-Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
+echo '[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
 ```
 当然，你也可以直接使用 AUR 助手安装。
