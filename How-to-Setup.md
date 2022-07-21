@@ -32,6 +32,15 @@ If you rename it, you can have multiple installs.
    You will need administrator privileges to install the certificate.
 3. Install the `.appx`
 
+### Method 3: online installer
+
+1. [Download `Arch_Online.zip`](https://github.com/yuk7/ArchWSL/releases/latest)
+2. Extract all files in zip file to the same directory.
+3. Run `Arch.exe` to download rootfs and register to WSL
+
+This zip file is doesn't include rootfs (~200 MB), hence its zip file is very small (~2 MB),
+but rootfs is donwloaded in the first run.
+
 ## Setup after install
 ### [If you are a WSL1 user, you **must** change the glibc package. Please see Known issues.](Known-issues.md#wsl1--wsl2)
 
