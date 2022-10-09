@@ -97,9 +97,9 @@ Please excute these commands to initialize the keyring.
 
 [user@PC-NAME]$ sudo pacman-key --populate
 
-[user@PC-NAME]$ sudo pacman -Syu
-
 [user@PC-NAME]$ sudo pacman -S archlinux-keyring
+
+[user@PC-NAME]$ sudo pacman -Syu
 ```
 
 ### Install patched glibc (need in WSL1)
