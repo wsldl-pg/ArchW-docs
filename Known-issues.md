@@ -58,7 +58,14 @@ sudo dbus-daemon --system
 ```
 
 ## systemd/systemctl
-WSL does not supports systemd natively, so we recommend using a systemctl alternative script or bottle for apps that require it.
+
+If you're using WSL 0.67.6 and above (see `wsl --version`), systemd is natively supported. To enable it, edit `/etc/wsl.conf` and then restart the distro.
+```
+[boot]
+systemd=true
+```
+
+If you're using an older version of WSL, we recommend using a systemctl alternative script or bottle for apps that require it.
 
 ### WSL1 / WSL2
 You can use a systemctl alternative script.
