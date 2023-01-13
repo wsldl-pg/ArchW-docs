@@ -95,3 +95,13 @@ WSL 并没有 systemd 的原生支持。
 你可以下载 [这里的 PKGBUILDs](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
 
 [读这里了解更多信息。](https://github.com/arkane-systems/genie#usage)
+
+#### Intel 显卡
+
+ArchWSL 默认可能无法正常加载 Intel WSL 驱动，这会导致无法在 Intel 显卡上使用 D3D12 驱动程序。
+
+导致这个问题的原因是 Intel WSL 驱动文件链接了 ArchLinux 并不存在的库文件，你可以手动修复它们使其正常工作。
+
+你需要先使用 `ldd` 查看它们链接了那些库，例如: `ldd /usr/lib/wsl/drivers/iigd_dch_d.inf_amd64_49b17bc90a910771/*.so`，然后查找标记为 `not found` 的库。接着查看 ArchLinux 软件包仓库是否有对应的包，如果有，安装它们，问题或许就解决了。如果在软件包仓库找不到对应的库文件，那可能是库文件的版本后缀不一样，比如 `libedit.so.0.0.68` 和 `libedit.so.2`，这时你可以试着为其创建一个指向现有版本的软链接。
+
+Issue: [#308](https://github.com/yuk7/ArchWSL/issues/308)

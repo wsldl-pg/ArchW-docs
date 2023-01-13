@@ -87,3 +87,13 @@ You can download [PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.j
 You can use [PKGBUILDs from here](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae).
 
 [See here for how to use it.](https://github.com/arkane-systems/genie#usage)
+
+#### Intel Graphics
+
+ArchWSL may not properly load the Intel WSL driver by default, which will make it impossible to use the D3D12 driver on Intel graphics cards.
+
+The cause of this problem is that the Intel WSL driver files link against libraries that do not exist on ArchLinux, you can manually fix them to make it work.
+
+You need to use `ldd` to see which libraries they are linked with, eg: `ldd /usr/lib/wsl/drivers/iigd_dch_d.inf_amd64_49b17bc90a910771/*.so`, and then look for libraries marked `not found`. Then check whether there are corresponding packages in the ArchLinux package repository. If so, install them, and the problem may be solved. If you cannot find the corresponding library file in the software package warehouse, it may be that the version suffix of the library file is different, such as `libedit.so.0.0.68` and `libedit.so.2`, then you can try to It creates a soft link to the existing version.
+
+Issue: [#308](https://github.com/yuk7/ArchWSL/issues/308)
