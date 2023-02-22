@@ -11,7 +11,7 @@ has_children: true
 
 ## Installation Instructions
 
-There are two ways to install ArchWSL.
+There are three ways to install ArchWSL.
 
 ### Method 1: zip file
 
