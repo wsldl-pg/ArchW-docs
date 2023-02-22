@@ -47,26 +47,32 @@ sudo dbus-daemon --system
 ```
 
 ## systemd/systemctl
-WSL은 systemd를 지원하지 않습니다.
-systemctl 대체 스크립트나 bottle응 사용하십시오.
+
+WSL 0.67.6 이상을 사용하는 경우(`wsl --version` 참조) systemd가 기본적으로 지원됩니다. 활성화하려면 `/etc/wsl.conf`를 편집한 다음 배포판을 다시 시작하십시오.
+```
+[boot]
+systemd=true
+```
+
+이전 버전의 WSL을 사용하는 경우 systemctl 대체 스크립트나 bottle을 사용하십시오.
 
 ### WSL1 / WSL2
-systemctl 대체 스크립트를 사용가능합니다.
+systemctl 대체 스크립트를 사용할 수 있습니다.
 그러나, 부분적으로만 호환됩니다.
 
 [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) 를 다운로드하고 ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` 를 실행하여 설치하십시오.
 
 ### WSL2
-systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)" 또는 "[genie](https://github.com/arkane-systems/genie)"를 사용가능합니다.
+systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)", "[genie](https://github.com/arkane-systems/genie)", "[wsl-distrod](https://github.com/nullpo-head/wsl-distrod)" 또는 "[bottled-shell](https://github.com/lungothrin/bottled-shell)"를 사용할 수 있습니다.
 
-그걸 사용하면, systemd 를 사용할 수 있습니다.
+앞에서 언급한 솔루션을 사용하면 systemd를 사용할 수 있습니다.
 
 #### subsystemctl
-[PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD) 를 다운로드하고 빌드할 수 있습니다.
+[PKGBUILD](https://raw.githubusercontent.com/sorah/arch.sorah.jp/master/aur-sorah/PKGBUILDs/subsystemctl/PKGBUILD)를 다운로드하여 빌드할 수 있습니다.
 
-[사용법으로 이걸 보십시오.](https://github.com/sorah/subsystemctl#usage)
+[사용 방법은 여기를 참조하세요.](https://github.com/sorah/subsystemctl#usage)
 
 #### genie
-[여기 있는 PKGBUILD들](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae)
+[PKGBUILD](https://gist.github.com/arlllk/7001c521de601f01735af5ca440f03ae)다운로드하여 빌드할 수 있습니다.
 
-[그것들을 어떻게 사용하는지 보십시오.](https://github.com/arkane-systems/genie#usage)
+[사용 방법은 여기를 참조하세요.](https://github.com/arkane-systems/genie#usage)
