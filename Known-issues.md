@@ -15,8 +15,8 @@ You can use `glibc-linux4`[ᴬᵁᴿ](https://aur.archlinux.org/packages/glibc-l
 
 You can install from archlinuxcn community repository (can auto-update, recommend)
 ```
-echo "[archlinuxcn]
-Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
+echo '[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
 ```
 or you can install from AUR helper

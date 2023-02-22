@@ -17,8 +17,8 @@ Você pode usar o pacote `glibc-linux4`[ᴬᵁᴿ](https://aur.archlinux.org/pac
 
 Você pode instalar a partir do repositório da comunidade archlinuxcn (pode atualizar automaticamente, recomendado)
 ```
-echo "[archlinuxcn]
-Server = https://repo.archlinuxcn.org/$arch" >> /etc/pacman.conf
+echo '[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring && sudo pacman -S glibc-linux4
 ```
 ou você pode instalar a partir com um auxiliar do AUR ("AUR helper")
