@@ -32,7 +32,7 @@ has_children: true
 1. 從 [[GH](https://github.com/yuk7/ArchWSL/releases/latest) / [鏡像](https://gitee.com/yuk7/archwsl-mirror)] 下載發佈的 .appx 和 .cer 檔案。
 
 2. 安裝 .cer 檔案到 「本機電腦」 的 「受信任的根憑證授權單位」。
-   更多詳情，請 [檢視對應的文件頁面](https://wsldl-pg.github.io/ArchW-docs/locale/zh-TW/Install-Certificate/)。
+   更多詳情，請 [檢視對應的文件頁面](Install-Certificate.md)。
 3. 雙擊安裝 appx 檔案。
 
 ## 完成安裝後的操作
