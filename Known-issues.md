@@ -71,7 +71,7 @@ If you're using an older version of WSL, we recommend using a systemctl alternat
 You can use a systemctl alternative script.
 However, this is only partially compatible.
 
-Download [systemd-altctl-1.4.4181-1-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-1/systemd-altctl-1.4.4181-1-any.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.4181-1-any.pkg.tar.xz``` to install.
+Download [systemd-altctl-1.4.4181-2-any.pkg.tar.xz](https://github.com/yuk7/arch-systemctl-alt/releases/download/1.4.4181-2/systemd-altctl-1.4.4181-2-any.pkg.tar.xz) and run ```pacman -U systemd-altctl-1.4.4181-2-any.pkg.tar.xz``` to install. Remember to check [the releases page](https://github.com/yuk7/arch-systemctl-alt/releases) for a newer version.
 
 ### WSL2
 You can use systemd bottle "[subsystemctl](https://github.com/sorah/subsystemctl)", "[genie](https://github.com/arkane-systems/genie)", "[wsl-distrod](https://github.com/nullpo-head/wsl-distrod)" or "[bottled-shell](https://github.com/lungothrin/bottled-shell)".
