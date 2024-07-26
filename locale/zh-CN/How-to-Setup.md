@@ -4,7 +4,7 @@ parent: "简体中文"
 grand_parent: "Translations"
 has_children: true
 ---
-# 如何安装
+# 如何安装及设置ArchWSL
 
 ## 系统需求
 
@@ -13,21 +13,19 @@ has_children: true
 
 ## 安装方法
 
-有两种方法安装 ArchWSL.
+安装ArchWSL有两种方法.
 
 
 
 ### 方法 1：zip 文件
 1. 下载 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/[镜像](https://gitee.com/yuk7/archwsl-mirror)] zip 安装包。
 2. 解压缩 zip 文件中的全部内容到相同的目录。
-   请解压到一个你拥有写权限的目录。
-   例如， `C:\Program Files` 就不该被使用。
-3. 运行 `Arch.exe` 来安装 rootfs 和注册表配置。
+   请解压到一个你拥有改写权限的目录。
+   例如， `C:\Program Files` 就不应该被使用，因为rootfs在这里不能被修改
+3. 运行 `Arch.exe` 来提取 rootfs 并且配置注册表到WSL。
 
-另外，EXE 文件的名称会同时用作你的 WSL 实例名称。
-
-也就是说，如果复制多个 EXE 文件，并重命名成不同的名称，你就同时拥有了多个不同的 ArchWSL 并且互不冲突。
-
+另外，EXE 文件的名称会同时用作你的 WSL 实例名称。如果你重命名这个exe文件，你将会进行拥有多个不同的 ArchWSL 并且互不冲突。
+<!-- Combined the previous translation with mine for the above paragraph. -->
 ### 方法 2：appx 包
 1. 从 [[GH](https://github.com/yuk7/ArchWSL/releases/latest)/[镜像](https://gitee.com/yuk7/archwsl-mirror)] 下载发布的 .appx 和 .cer 文件。
 
@@ -36,7 +34,7 @@ has_children: true
 3. 双击安装 appx 文件。
 
 ## 完成安装后的操作
-### [若你使用 WSL1 ，你将**必须**修改一下 glibc 包。更多详情，请查看已知问题章节。](Known-issues.md#wsl1--wsl2)
+### [如果你使用 WSL1 ，你将**必须**修改一下 glibc 包。更多详情，请查看已知问题章节。](Known-issues.md#wsl1--wsl2)
 
 ### 设置Root密码
 
