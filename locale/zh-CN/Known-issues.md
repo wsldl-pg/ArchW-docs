@@ -68,8 +68,12 @@ sudo dbus-daemon --system
 
 ## systemd/systemctl
 
-WSL 并没有 systemd 的原生支持。
-如果你需要使用依赖 systemd 支持的程序，我们建议使用替代脚本或容器。
+如果您使用 WSL 0.67.6 及更高版本（可通过 `wsl --version` 查看），则原生支持 systemd。要启用它，请编辑 `/etc/wsl.conf`，然后重新启动发行版。
+
+```
+[boot]
+systemd=true
+```
 
 ### WSL1 / WSL2
 
