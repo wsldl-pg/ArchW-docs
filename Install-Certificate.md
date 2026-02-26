@@ -1,4 +1,4 @@
----
+Install-Certificate.m---
 title: Install Certificate for AppX
 parent: "How to Setup"
 #nav_order:
